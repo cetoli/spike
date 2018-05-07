@@ -38,7 +38,7 @@ Email: omgrayane@gmail.com
 CPF: 121.559.357-06
 Endereco: Rua Jorge Martins, quadra LM, bloco 26, apto 104 Bairro: Olaria
 CEP: 21073-190
-Nascimento:12/12/1988
+Nascimento: 12/12/1988
 4©Nome:  Rafael da Silva Pizzo Cardoso
 DRE: 117256184
 CPF: 176.680.887-50
@@ -47,7 +47,7 @@ CEP: 20921-070
 nascimento: 20/04/1999
 Email: Pizzocardoso@outlook.com
 5©Nome:  Danielle Veloso Rodrigues 
-DRE:117230340
+DRE: 117230340
 CPF: 186.038.267-30
 Endereco: Rua Antonio Costa Magalhaes- Jacarepagua 
 nascimento: 06/08/1999
@@ -76,7 +76,7 @@ Endereco: Rua Pacheco Leão, 2036 casa 06; Bairro: Jardim Botânico
 nascimento: 25/01/1997
 Email: jufies888@hotmail.com
 10©Nome:  Leniah Lima Teixeira 
-DRE:117196766
+DRE: 117196766
 CPF: 454.152.758-86
 Endereco: Rua Dalia, n° 22, Vila residencial- Cidade Universitária
 nascimento: 20/11/1996
@@ -107,7 +107,7 @@ Email: alexsandravianna@yahoo.com.br
 15©Nome:  Sarah Maria dos Santos 
 CPF: 123.424.057-23
 Endereco: Avenida Pernambucana, 1860- Vila Rosali -SJM 
-CEP:25510-430
+CEP: 25510-430
 nascimento: 24/04/1999
 16©Nome:  Leidiene Deolindo dos Santos
 DRE: 117051348
@@ -138,7 +138,7 @@ CPF: 133.540.157-12
 Endereco: Rua Ituverava, 866, Anil – CEP: 22.750-006 – Rio de Janeiro – RJ.
 21©Nome:  Cibele Ribeiro da Cunha Oliveira
 nascimento:
-CPF:10752346709
+CPF: 10752346709
 Endereco:
 22©Nome: Dayara Santos Carvalho
 CPF: 11764050630
@@ -191,7 +191,7 @@ class Parse:
     def parse(self):
         def recorder(rec):
             record=rec.splitlines()
-            dater = {key: value.split("{}: ".format(key))[1] for value in record for key in self.campos if key in value}
+            dater = {key: value.split("{}: ".format(key))[-1] for value in record for key in self.campos if key in value}
             dat = dict(self.data)
             dat.update(dater)
             return dat
