@@ -4,8 +4,8 @@
     <title>Neuropedagogia Computacional</title>
     <!-- stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/bulma.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/site/css/bulma.css">
+    <link rel="stylesheet" href="/site/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -16,7 +16,7 @@
 <nav class="navbar is-transparent">
   <div class="navbar-brand">
     <a class="navbar-item" href="http://www.superpython.net">
-      <img src="/image/camisasuperpython.png" alt="Superpython" width="60" height="28">
+      <img src="image/logo_neurolog150.jpg" alt="Neurocomp" width="60" height="28">
     </a>
     <div id="burg_menu" class="navbar-burger burger" data-target="navbarExampleTransparentExample">
             <a class="navbar-item is-tab" href="#">
@@ -50,10 +50,10 @@
     <!-- this "nav-menu" is hidden on mobile -->
     <div id="right_menu" class="navbar-end">
         <a class="navbar-item is-tab" href="/site/help.html">
-            Help
+            Ajuda
         </a>
         <a class="navbar-item is-tab" href="/site/about.html">
-            About
+            Sobre
         </a>
     </div>
     <!-- end of nav -->
@@ -68,8 +68,8 @@
             <div class="container">
                 <div class="has-text-centered">
                     <!-- header && subheader -->
-                    <h1 class="title is-1 is-spaced">SUPER PYTHON</h1>
-                    <h4 class="subtitle is-4">learn python with games</h4>
+                    <h1 class="title is-1 is-spaced">Neuropedagogia Computacional</h1>
+                    <h4 class="subtitle is-4">educação como processo científico</h4>
                     <!-- end of header && subheader -->
 
                 </div>
@@ -91,7 +91,7 @@
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <a href="/supygirls/project">
-                                <img src="image/camisasuperpython.png" alt="Image">
+                                <img src="/image/logo_neurolog150.jpg" alt="Image">
                             </a>
                         </figure>
                     </div>
@@ -99,35 +99,11 @@
 
                     <!-- post header -->
                     <div class="card-content-header">
-                        <h4 class="title is-4"><a href="/supygirls/project">SuperPython</a></h4>
+                        <h4 class="title is-4"><a href="/supygirls/project">Fonoaudiologia Computacional</a></h4>
                     </div>
                     <!-- end of post header -->
-                    Gather your team to develop your own game
+                    fonoaudiologia cognitiva assistida por computador
 
-                    <!-- post content -->
-                </div>
-            </div>
-            <!-- end of post -->
-
-            <!-- start of post -->
-            <div class="column is-4">
-                <div class="card">
-                    <!-- image for post -->
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <a href="/kwarwp">
-                                <img src="image/abertura_kwarwpp.jpg" alt="Kwarwp">
-                            </a>
-                        </figure>
-                    </div>
-                    <!-- end of image for post -->
-
-                    <!-- post header -->
-                    <div class="card-content-header">
-                        <h4 class="title is-4"><a href="/kwarwp">Kwarwp</a></h4>
-                    </div>
-                    <!-- end of post header -->
-                    Follow the adventures of a brave warrior
                     <!-- post content -->
                 </div>
             </div>
@@ -140,7 +116,7 @@
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <a href="/supygirls/project">
-                                <img src="image/supygirls_logo.png" alt="Image">
+                                <img src="/image/logo_neurolog150.jpg" alt="Image">
                             </a>
                         </figure>
                     </div>
@@ -148,10 +124,110 @@
 
                     <!-- post header -->
                     <div class="card-content-header">
-                        <h4 class="title is-4"><a href="/supygirls/project">SuPyGirls</a></h4>
+                        <h4 class="title is-4"><a href="/supygirls/project">Lógica Linguística</a></h4>
                     </div>
                     <!-- end of post header -->
-                    Roll your own game with python
+                    a estrutura lógica por trás das liguagens
+                    <!-- post content -->
+                </div>
+            </div>
+            <!-- end of post -->
+        </div>
+        <!-- end of posts -->
+        <!-- start of posts -->
+        <div class="columns is-multiline is-centered has-text-centered">
+            <!-- start of post -->
+            <div class="column is-3">
+                <div class="card">
+                    <!-- image for post -->
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <a href="/supygirls/project">
+                                <img src="/image/camisasuperpython.png" alt="Image">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- end of image for post -->
+
+                    <!-- post header -->
+                    <div class="card-content-header">
+                        <h4 class="title is-5"><a href="/supygirls/project">SuperPython SuPyPerson</a></h4>
+                    </div>
+                    <!-- end of post header -->
+                    ensinando a programar com games
+
+                    <!-- post content -->
+                </div>
+            </div>
+            <!-- end of post -->
+            <!-- start of post -->
+            <div class="column is-3">
+                <div class="card">
+                    <!-- image for post -->
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <a href="/supygirls/project">
+                                <img src="/image/camisasuperpython.png" alt="Image">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- end of image for post -->
+
+                    <!-- post header -->
+                    <div class="card-content-header">
+                        <h4 class="title is-5"><a href="/supygirls/project">SuperPython Mirim</a></h4>
+                    </div>
+                    <!-- end of post header -->
+                    introduzindo jovens talentos à programação
+
+                    <!-- post content -->
+                </div>
+            </div>
+            <!-- end of post -->
+            <!-- start of post -->
+            <div class="column is-3">
+                <div class="card">
+                    <!-- image for post -->
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <a href="/supygirls/project">
+                                <img src="/image/camisasuperpython.png" alt="Image">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- end of image for post -->
+
+                    <!-- post header -->
+                    <div class="card-content-header">
+                        <h4 class="title is-5"><a href="/supygirls/project">SuperPython Resgate</a></h4>
+                    </div>
+                    <!-- end of post header -->
+                    abrindo horizontes com a programação de games
+
+                    <!-- post content -->
+                </div>
+            </div>
+            <!-- end of post -->
+
+            <!-- start of post -->
+            <div class="column is-3">
+                <div class="card">
+                    <!-- image for post -->
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <a href="/supygirls/project">
+                                <img src="/image/supygirls_logo.png" alt="Image">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- end of image for post -->
+
+                    <!-- post header -->
+                    <div class="card-content-header">
+                        <h4 class="title is-5"><a href="/supygirls/project">SupyGirls</a></h4>
+                    </div>
+                    <!-- end of post header -->
+                    empoderamento feminino através da ti
                     <!-- post content -->
                 </div>
             </div>
