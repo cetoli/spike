@@ -15,15 +15,115 @@ Changelog
 
 """
 from collections import Counter
+
+import numpy as np
 from pdfreader import SimplePDFViewer
 from pathlib import Path
 from tinydb import TinyDB, Query  # , Query
 from configuration import TAG, AREA
+GLOVE = "/home/carlo/Documentos/inpe/cbow_s50.txt"
+
+
+class SelfOrgMap:
+    def __init__(self, ped=None):
+        _ped = list(ped)
+        tag_set = set([t for _, t, __ in _ped])
+        ped_by_tag = [[(p, tg, n) for p, tg, n in _ped if tg == tis] for tis in tag_set]
+        all_ped = [c for ct in ped_by_tag for c, *_ in ct if c]
+        self.titles = titles = [t for ct in ped_by_tag for _, __, t in ct]
+        self.y = y = np.concatenate([[i] * len(p) for i, p in enumerate(ped_by_tag)])
+        print(len(all_ped), tag_set, titles, y)
+        # return
+
+        def gimme_glove():
+            with open(GLOVE, encoding='utf-8') as glove_raw:
+                for line in glove_raw.readlines():
+                    splitting = line.split(' ')
+                    yield splitting[0], np.array(splitting[1:], dtype=float)
+
+        self.all_ped = all_ped
+        self.ped = self.tokenize()
+        self.glove = {w: x for w, x in gimme_glove()}
+
+        def poem_to_vec(tokens):
+            words = [w for w in np.unique(tokens) if w in self.glove]
+            return np.array([self.glove[w] for w in words])
+
+        W = [poem_to_vec(tokenized).mean(axis=0) for tokenized in self.ped]
+        self.w = W = np.array(W)
+        print(W.shape, W[0])
+
+    def tokenize(self):
+        from string import punctuation
+        import stop_words
+        stopwords = stop_words.get_stop_words('portuguese')
+
+        def tokenize_poem(poem):
+            poem = poem.lower().replace('\n', ' ')
+            for sign in punctuation:
+                poem = poem.replace(sign, '')
+            tokens = poem.split()
+            tokens = [t for t in tokens if t not in stopwords and t != '']
+            return tokens
+
+        return [tokenize_poem(poem) for poem in self.all_ped]
+
+    def som(self):
+        from minisom import MiniSom
+        import matplotlib.pyplot as plt
+        # %matplotlib inline
+
+        map_dim = 16
+        W = self.w
+
+        som = MiniSom(map_dim, map_dim, 50, sigma=1.0, random_seed=1)
+        # som.random_weights_init(W)
+        # som.train_batch(W, num_iteration=len(W) * 500, verbose=True)
+        som.train_batch(W, num_iteration=len(W) * 3000, verbose=True)
+
+        author_to_color = {0: 'chocolate',  # defesa
+                           1: 'steelblue',  # segurança
+                           2: 'dimgray',  # coisas
+                           3: 'red',  # internet
+                           4: 'green',  # informação
+                           5: 'navy'}  # software
+        color = [author_to_color[yy] for yy in self.y]
+
+        from matplotlib.patches import Patch
+        legend_elements = [Patch(facecolor=author_to_color[0], edgecolor='white', label='defesa cib'),
+                           Patch(facecolor=author_to_color[1], edgecolor='white', label='segurança info'),
+                           Patch(facecolor=author_to_color[2], edgecolor='white', label='int coisas'),
+                           Patch(facecolor=author_to_color[3], edgecolor='white', label='sis internet'),
+                           Patch(facecolor=author_to_color[4], edgecolor='white', label='sis informação'),
+                           Patch(facecolor=author_to_color[5], edgecolor='white', label='eng software'), ]
+
+        plt.figure(figsize=(20, 20))
+        texts = []
+        for i, (t, c, vec) in enumerate(zip(self.titles, color, W)):
+            winnin_position = som.winner(vec)
+            texts.append(plt.text(winnin_position[0],
+                                  winnin_position[1] + np.random.rand() * .9,
+                                  # t[:-5],
+                                  t,
+                                  color=c))
+
+        plt.legend(handles=legend_elements, loc='lower right')
+        plt.xticks(range(map_dim))
+        plt.yticks(range(map_dim))
+        plt.grid()
+        plt.xlim([0, map_dim])
+        plt.ylim([0, map_dim])
+        plt.plot()
+        plt.show()
+        print("did")
 
 
 class Doc:
-    def __init__(self, data, name, content, dbase=None, ifes=None, coid=None, course=None):
+    def __init__(self, data, name, content, dbase=None, ifes=None, coid=None, course=None,
+                 instituto=None, nome=None, grau=None, tagger=None, tag_name=None,):
         self.ifes, self.coid, self.course = data or (ifes, coid, course)
+        self.instituto, self. nome, self. grau = instituto,  nome,  grau
+        self. tagger, self.tag_name = tagger,  tag_name
         self.tags, self.areas = {}, {}
         self.tag_count = 0
         self.name = name
@@ -73,12 +173,35 @@ class Main:
 
     def __init__(self, dbase=None):
         """ open files in projects"""
+        self.base = dbase if dbase is not None else self.DIRNAME
         self.doc = []
         self.tag, self.areas = Counter(), Counter()
         self.from_file(dbase) if not dbase.all() else self.from_dbase(dbase)
 
+    def _add_info(self, arc="../data/ines.csv"):
+        from csv import reader
+        from collections import namedtuple
+        field_names = "ifes instituto coid nome grau tagger tag_name"
+        fields = namedtuple("fields", field_names)
+        query = Query()
+        with open(arc, "r", encoding="utf-8") as filer:
+            info = reader(filer)
+            linfo = list(info)
+            linfo = [fields(c, t, o, i, a, (ks := k.split(" - "))[0], ks[1])
+                     for c, t, o, i, a, k, *_ in linfo]
+            [print(li) for li in linfo]
+            print(self.doc[0].coid, self.doc[0].course)
+            ics = linfo[0].coid
+            cs = self.base.search(query.coid == ics)
+            print(cs[0]["ifes"], ics)
+            dupper = [li._asdict() for li in linfo]
+            print(dupper)
+            [self.base.update(li._asdict(), query.coid == li.coid) for li in linfo]
+            print(self.base.all()[0])
+
+    # def somap(self):
+
     def plot_bars(self):
-        import numpy as np
         import matplotlib.pyplot as plt
         X = [course.coid for course in self.doc]
         tags = self.tag.keys()
@@ -162,16 +285,20 @@ class Main:
 def main():
     dados = Path(__file__).parent.parent / "data" / "inep.json"
     db = TinyDB(dados)
-    print(dados, len(db.all()), db)
+    # print(dados, len(db.all()), db)
     main_instance = Main(db).tag_base()
     # tags = Counter()
     # [tags.update(doc.tags) for doc in main.doc]
     main_instance.trim_class(30)
-    print(main_instance.tag)
+    # print(main_instance.tag)
+    som = SelfOrgMap([(cd.content, cd.tag_name, cd.nome) for cd in main_instance.doc if cd.tag_name])
+    som.som()
+    # main_instance.add_info()
+    # main_instance.add()
     # main_instance.plot_bars()
-    main_instance.scatter_plot()
-    [print(doc.coid, doc.course, len(doc.content), doc.tag_count) for doc in main_instance.doc]
-    doc16 = list(doc for doc in main_instance.doc if str(doc.coid) == "1620488")[0]
+    # main_instance.scatter_plot()
+    # [print(doc.coid, doc.course, len(doc.content), doc.tag_count) for doc in main_instance.doc]
+    # doc16 = list(doc for doc in main_instance.doc if str(doc.coid) == "1620488")[0]
     # doc16.content = doc16.content.replace("■", " ").replace("○", " ")
     # print(doc16.content)
     # Fruit = Query()
