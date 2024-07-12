@@ -57,7 +57,9 @@ h = {
         ('Inteligência e Espionagem em CiberSegurança', '32'),
         ('Relações Internacionais e CiberSegurança', '32'),
         ('Usabilidade e Experiência do Usuário em CiberSegurança', '32'),
-        ('Atividades Complementares IV - CiberSegurança', '59')],
+        ('Atividades Complementares IV - CiberSegurança', '59'),
+        ('__TOTAL__', '3204')  # este item deve ter esse nome __TOTAL__ seguido do número de horas
+    ],
     "1671887":
     """Cód.
 3847(Fev/Jun)Ambientação Digital0,510100
@@ -176,8 +178,16 @@ Temas Transversais"""
 }
 
 
+def main():
+    text = h['1671887']
+    text = [md.split("Cód.")[1] if "Cód." in md else '' for md in text.split('TOTAL EM HORAS') if md]
+    text = [[t for t in tx.split('\n') if "(" in t] for tx in text]
+    [print(t) for t in text]
+
+
 if __name__ == '__main__':
-    hh = list(h.values())[0].split("\n")
+    main()
+    # hh = list(h.values())[0].split("\n")
     # hh = [(v[:-2], v[-2:]) for v in hh]
     # lin = list(hh.values())  # [0]  # .split("\n")
-    [print(f"{ln},") for ln in hh]
+    # [print(f"{ln},") for ln in hh]

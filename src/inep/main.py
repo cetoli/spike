@@ -21,6 +21,8 @@ from pdfreader import SimplePDFViewer
 from pathlib import Path
 from tinydb import TinyDB, Query  # , Query
 from configuration import TAG, AREA
+
+# noinspection SpellCheckingInspection
 GLOVE = "/home/carlo/Documentos/inpe/cbow_s50.txt"
 
 
@@ -31,6 +33,7 @@ class SelfOrgMap:
         ped_by_tag = [[(p, tg, n) for p, tg, n in _ped if tg == tis] for tis in tag_set]
         all_ped = [c for ct in ped_by_tag for c, *_ in ct if c]
         self.titles = titles = [t for ct in ped_by_tag for _, __, t in ct]
+        # noinspection PyTypeChecker
         self.y = y = np.concatenate([[i] * len(p) for i, p in enumerate(ped_by_tag)])
         print(len(all_ped), tag_set, titles, y)
         # return
@@ -76,10 +79,11 @@ class SelfOrgMap:
         map_dim = 16
         W = self.w
 
-        som = MiniSom(map_dim, map_dim, 50, sigma=1.0, random_seed=1)
+        # som = MiniSom(map_dim, map_dim, 50, sigma=1.0, random_seed=1)
+        som = MiniSom(map_dim, map_dim, 50, sigma=0.5, random_seed=1)
         # som.random_weights_init(W)
         # som.train_batch(W, num_iteration=len(W) * 500, verbose=True)
-        som.train_batch(W, num_iteration=len(W) * 3000, verbose=True)
+        som.train_batch(W, num_iteration=len(W) * 15000, verbose=True)
 
         author_to_color = {0: 'chocolate',  # defesa
                            1: 'steelblue',  # segurança
@@ -100,9 +104,9 @@ class SelfOrgMap:
         plt.figure(figsize=(20, 20))
         texts = []
         for i, (t, c, vec) in enumerate(zip(self.titles, color, W)):
-            winnin_position = som.winner(vec)
-            texts.append(plt.text(winnin_position[0],
-                                  winnin_position[1] + np.random.rand() * .9,
+            winning_position = som.winner(vec)
+            texts.append(plt.text(winning_position[0],
+                                  winning_position[1] + np.random.rand() * .9,
                                   # t[:-5],
                                   t,
                                   color=c))
