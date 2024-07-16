@@ -668,8 +668,9 @@ def aux():
     [print(f'("{nome}",\n"""{perfil}"""),') for nome, perfil in areas]
 
 
-t =[c for c, p in CURSO]
-tg = dict(TAG)
-# [print(f"a{b}='{a}' #{c.replace(' ', '_')}") for a,(b, c) in zip(t, TAG)]
-s = [(a, b, a[1:]) for a, b in SUPER.items()]
-[print(f"a{b}='{a}'  # {tg[d].replace(' ', '_')}") for a, (b, c, d) in zip(t, s)]
+def main():
+    t =[c for c, p in CURSO]
+    tg = dict(TAG)
+    # [print(f"a{b}='{a}' #{c.replace(' ', '_')}") for a,(b, c) in zip(t, TAG)]
+    s = [(a, b, a[1:]) for a, b in SUPER.items()]
+    [print(f"a{b}='{a}'  # {tg[d].replace(' ', '_')}") for a, (b, c, d) in zip(t, s)]

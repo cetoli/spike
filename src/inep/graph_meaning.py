@@ -4,6 +4,7 @@ Changelog
 ---------
 .. versionadded::    24.07
     |br| first version of main (11)
+    |br| added trim and rebuff (15)
 
 |   **Open Source Notification:** This file is part of open source program **INEP**
 |   **Copyright © 2024  Carlo Oliveira** <carlo@nce.ufrj.br>,
@@ -20,12 +21,17 @@ from collections import Counter
 
 
 class Text:
+    """
+    Limpeza e tokenização do texto
+
+    Remove palavras de ligação
+    """
     TEXT = None
 
-    def __init__(self):
+    def __init__(self, txt=None):
         Text.TEXT = self if not Text.TEXT else Text.TEXT
         tags = " " + " ".join([a for _, a in TAG])
-        self.original = TXT + tags
+        self.original = txt or (TXT + tags)
         self.clean = None
 
     def cleaner(self):
@@ -40,8 +46,9 @@ class Text:
         for sign in punctuation:
             body = body.replace(sign, "0")
         stop = stop + "através mediante incluir conclusão perfil".split()
-        print('stops', stop[-20:])
+        # print('stops', stop[-20:])
         body = body.lower().replace('\n', ' ')
+        body = body.replace('requeridabiblioteca', 'requerida biblioteca')
         list_body = body.split()
 
         # list_body = self.tokenize()
@@ -55,7 +62,7 @@ class Text:
         self.clean = count = Counter(clean)
         tup = list(count.items())
         tup.sort(key=lambda x: x[1], reverse=True)
-        print(tup[:100])
+        # print(tup[:100])
         return count
 
 
@@ -73,6 +80,7 @@ class SurveyText:
         self.text = text_dictionary
         self.relevant = [strip(word) for word, cnt in self.text.items() if cnt >= relevancy]
         self.pairs, self.levels = {}, {}
+        self.good = self.relevant
     '''
     def survey(self, window=10, forte=8):
         size = len(self.relevant)
@@ -93,7 +101,7 @@ class SurveyText:
     def survey(self, window=10, forte=8):
         original = Text.TEXT.original
         size = len(original)
-        print("survey", size, original[:300])
+        # print("survey", size, original[:300])
         rlv = self.relevant
         for here, word in enumerate(original):
             start = here - window if here >= window else 0
@@ -109,29 +117,68 @@ class SurveyText:
         levels = {key: (levels[key] + self.levels.setdefault(key, 0)) for key in levels}
         self.levels = {key: value // 6 - 1 for key, value in levels.items() if value > forte}
 
-    def nodes(self, relevancy=2):
+    def nodes_(self, relevancy=2):
+        pass
         # node = {name[0]: good for name, good in self.pairs.items() if good>relevancy}
-        relevant = {na: good for (na, _), good in self.pairs.items() if good > relevancy}
-        relevant.update({na: good for (_, na), good in self.pairs.items() if good > relevancy})
-        node = {name: good for name, good in self.levels.items() if name in relevant}
-        node = ({nd: cnt for nd, cnt in self.levels.items() if nd in node})
-        # node.update({name[1]: good if good > node.setdefault(name[1], 0) else node[name[1]]
-        #              for name, good in self.pairs.items() if good>relevancy})
+        # relevant = {na: good for (na, _), good in self.pairs.items() if good > relevancy}
+        # relevant.update({na: good for (_, na), good in self.pairs.items() if good > relevancy})
+        # node = {name: good for name, good in self.levels.items() if name in relevant}
+        # node = ({nd: cnt for nd, cnt in self.levels.items() if nd in node})
+        # # node.update({name[1]: good if good > node.setdefault(name[1], 0) else node[name[1]]
+        # #              for name, good in self.pairs.items() if good>relevancy})
         # return node.keys()
         # return node.items()
         # return self.levels.items()
+        # return node.items()
+
+    def nodes(self, relevancy=2):
+        relevant = {na: good for (na, nb), good in self.pairs.items()
+                    if (good > relevancy) and (na in self.good) and (nb in self.good)
+                    }
+        relevant.update({na: good for (_, na), good in self.pairs.items() if good > relevancy})
+        node = {name: good for name, good in self.levels.items() if name in relevant}
+        node = ({nd: cnt for nd, cnt in self.levels.items() if nd in node})
         return node.items()
 
     def show(self, relevancy=20):
         tuple_list = list(self.pairs.items())
         # tuple_list = tuple_list.sort(key = lambda x: x[1], reverse=True)
         tuple_list = sorted(tuple_list, key=lambda x: x[1], reverse=True)
-        _list = [(_tuple[0], _tuple[1], good) for _tuple, good in tuple_list if good > relevancy]
+        _list = [(na, nb, good) for (na, nb), good in tuple_list
+                 if (good > relevancy) and (na in self.good) and (nb in self.good)]
         return _list
 
+    def trim(self, relevancy=20):
+        relevant = self.show(relevancy=relevancy)
+        relevant = [a for a, *_ in relevant]+[a for _, a, *_ in relevant]
+        print(len(relevant))
+        return list(set(relevant))
+
+    def rebuff(self, window=4):
+        def find_all(a_str, sub):
+            start = 0
+            while True:
+                start = a_str.find(sub, start)
+                if start == -1:
+                    return
+                yield start
+                start += len(sub)  # use start += 1 to find overlapping matches
+
+        mark = self.trim()
+        original_text = " ".join(Text.TEXT.original)
+        original = Text.TEXT.original
+        rebuffed = []
+        end = len(original)
+        for word in mark:
+            for begin in find_all(original_text, word):
+                rebuffed.extend(original[max(0, begin-window):min(end, begin+window)])
+        self.relevant = list(set(rebuffed))
+        return self.relevant
+
     # noinspection SpellCheckingInspection
-    def paint(self, window=10, relevancy=20, cof=40):
-        _ = self  # void statement to fool lint inspector
+    @staticmethod
+    def paint(window=10, relevancy=20, cof=40):
+        # _ = self  # void statement to fool lint inspector
         st = SurveyText(Text.TEXT.clean)
         st.survey(window)
         print(st.show(relevancy))  # [:200])
@@ -139,8 +186,11 @@ class SurveyText:
 
         import networkx as nx  # importing networkx package
         import matplotlib.pyplot as plt  # importing matplotlib package and pyplot is for displaying the graph on canvas
+        import matplotlib
         # matrix = "yyyycccccccmmmmmmmmbbbbbbbbbggggggggggggrrrrrrrrrrrrrrrrrrr"
-        matrix = "ycmgbr"*20
+        ma = [x for x in matplotlib.colors.ColorConverter.colors.keys() if len(x) == 1]
+        print(ma)
+        matrix = "ycmgbr"*200
         lm = len(matrix)-1
         colors = {wg: cl for wg, cl in enumerate(matrix)}
         plt.rcParams["figure.figsize"] = [15.50, 8.50]
@@ -157,16 +207,49 @@ class SurveyText:
         plt.show()  # displays the networkx graph on matplotlib canvas
 
 
-def main():
-    tx = Text().cleaner()
+def test2(text=None):
+    tx = Text(text).cleaner()
     sv = SurveyText(tx)
     sv.survey(20)
     sv.nodes(4)
     # [print(nd) for nd in sv.nodes(20)]
     # print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     # [print(nd) for nd in sv.show(40)]
+    # sv.plot()
+    t = sv.trim()
+    print(len(Text.TEXT.original))
+    [print(t[a:a+10]) for a in range(0, len(t), 20)]
+    t = sorted(sv.rebuff(20))
+    print(len(t))
+    [print(t[a:a+10]) for a in range(0, len(t), 20)]
     sv.paint(relevancy=8, cof=20)
 
 
+def test(text=None):
+    from pathlib import Path
+    dados = Path(__file__).parent.parent / "data" / "inep.json"
+    from tinydb import TinyDB, Query
+    db = TinyDB(dados)
+    Fruit = Query()
+    x = db.search(Fruit.coid == '1620488')
+
+    # print(x[0]["content"])  # ["content"][:100])
+    test2(x[0]["content"])
+
+
+def main(text=None):
+    tx = Text(text).cleaner()
+    SurveyText.paint()
+    sv = SurveyText(tx)
+    sv.survey(20)
+    print(len(Text.TEXT.original))
+    # [print(t[a:a+10]) for a in range(0, len(t), 20)]
+    # t.sort()
+    t = sorted(sv.rebuff(20))
+    print(len(t))
+    [print(t[a:a+10]) for a in range(0, len(t), 20)]
+    return t
+
+
 if __name__ == '__main__':
-    main()
+    test()
