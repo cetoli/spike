@@ -1,3 +1,4 @@
+# noinspection SpellCheckingInspection
 """ Configuration for project Inep.
 
 Changelog
@@ -14,15 +15,15 @@ Changelog
 .. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
 
 """
-STOPWORDS = "https://gitlab.com/cetoli/spike/-/raw/master/src/neurocomp/conf/stopwords.txt"
-"""Remove as stopwords da especificação"""
 from configuration import TXT, TAG
 from collections import Counter
+STOPWORDS = "https://gitlab.com/cetoli/spike/-/raw/master/src/neurocomp/conf/stopwords.txt"
+"""Remove as stopwords da especificação"""
 
 
 class Text:
     """
-    Limpeza e tokenização do texto
+    Limpeza e tokenization do texto
 
     Remove palavras de ligação
     """
@@ -38,17 +39,19 @@ class Text:
         import stop_words
         from string import punctuation
         stop = stop_words.get_stop_words('portuguese')
+        xtr = "nº cada si toda todas et al ii iii iv v vi vii viii ix xi xii xiii é a b c d e f g h i j x y z".split()
+        stop.extend(xtr)
 
         # tx = Text()
         Text.TEXT = self
         text = self.original
         body = text.lower()  # .decode('utf-8')
-        for sign in punctuation:
-            body = body.replace(sign, "0")
+        pontos = punctuation.replace("-", "") + '●'
+        for sign in pontos:
+            body = body.replace(sign, "")
         stop = stop + "através mediante incluir conclusão perfil".split()
         # print('stops', stop[-20:])
         body = body.lower().replace('\n', ' ')
-        body = body.replace('requeridabiblioteca', 'requerida biblioteca')
         list_body = body.split()
 
         # list_body = self.tokenize()
@@ -73,7 +76,7 @@ class SurveyText:
     O texto será percorrido usando uma janela de pertinência centrada em cada palavra
     """
 
-    def __init__(self, text_dictionary, relevancy=2):
+    def __init__(self, text_dictionary, original, relevancy=2):
         def strip(w):
             return w[:-2] if w.endswith("es") else w[:-1] if w.endswith("s") else w
 
@@ -81,6 +84,7 @@ class SurveyText:
         self.relevant = [strip(word) for word, cnt in self.text.items() if cnt >= relevancy]
         self.pairs, self.levels = {}, {}
         self.good = self.relevant
+        self.original = original
     '''
     def survey(self, window=10, forte=8):
         size = len(self.relevant)
@@ -99,7 +103,7 @@ class SurveyText:
         self.levels = {key: value // 6 - 1 for key, value in levels.items() if value > forte}
     '''
     def survey(self, window=10, forte=8):
-        original = Text.TEXT.original
+        original = self.original
         size = len(original)
         # print("survey", size, original[:300])
         rlv = self.relevant
@@ -165,8 +169,8 @@ class SurveyText:
                 start += len(sub)  # use start += 1 to find overlapping matches
 
         mark = self.trim()
-        original_text = " ".join(Text.TEXT.original)
-        original = Text.TEXT.original
+        original_text = " ".join(self.original)
+        original = self.original
         rebuffed = []
         end = len(original)
         for word in mark:
@@ -176,12 +180,11 @@ class SurveyText:
         return self.relevant
 
     # noinspection SpellCheckingInspection
-    @staticmethod
-    def paint(window=10, relevancy=20, cof=40):
+    def paint(self, window=10, relevancy=20, cof=40):
         # _ = self  # void statement to fool lint inspector
-        st = SurveyText(Text.TEXT.clean)
-        st.survey(window)
-        print(st.show(relevancy))  # [:200])
+        # st = SurveyText(Text.TEXT.clean)
+        self.survey(window)
+        print(self.show(relevancy))  # [:200])
         # print(st.nodes())
 
         import networkx as nx  # importing networkx package
@@ -196,8 +199,8 @@ class SurveyText:
         plt.rcParams["figure.figsize"] = [15.50, 8.50]
         plt.rcParams["figure.autolayout"] = True
         wg = nx.Graph()
-        _ = [wg.add_node(node, size=size) for node, size in st.nodes(relevancy)]
-        _ = [wg.add_edge(a, b, color=colors[max(lm, w-cof)], weight=w-cof) for a, b, w in st.show(relevancy)]
+        _ = [wg.add_node(node, size=size) for node, size in self.nodes(relevancy)]
+        _ = [wg.add_edge(a, b, color=colors[max(lm, w-cof)], weight=w-cof) for a, b, w in self.show(relevancy)]
         sizes = [wg.nodes[s]['size'] * 100 for s in wg.nodes]
         color = [colors[wg.nodes[s]['size']] for s in wg.nodes]
 
@@ -209,7 +212,7 @@ class SurveyText:
 
 def test2(text=None):
     tx = Text(text).cleaner()
-    sv = SurveyText(tx)
+    sv = SurveyText(tx, text)
     sv.survey(20)
     sv.nodes(4)
     # [print(nd) for nd in sv.nodes(20)]
@@ -227,29 +230,48 @@ def test2(text=None):
 
 def test(text=None):
     from pathlib import Path
+    from main import test
     dados = Path(__file__).parent.parent / "data" / "inep.json"
     from tinydb import TinyDB, Query
     db = TinyDB(dados)
-    Fruit = Query()
-    x = db.search(Fruit.coid == '1620488')
+    query = Query()
+    x = db.search(query.coid == '1620488')
+    t = text or x[0]["content"]
+    t = test(t)
+    main(t)
+    # st = 15
+    # [print(t[a:a + st]) for a in range(0, len(t), st)]
 
     # print(x[0]["content"])  # ["content"][:100])
-    test2(x[0]["content"])
+    # test2(x[0]["content"])
+
+
+def test_survey(text=None):
+    from pathlib import Path
+    dados = Path(__file__).parent.parent / "data" / "inep.json"
+    from tinydb import TinyDB, Query
+    db = TinyDB(dados)
+    query = Query()
+    x = db.search(query.coid == '1620488')
+    t = text or x[0]["content"]
+    main(t)
 
 
 def main(text=None):
-    tx = Text(text).cleaner()
-    SurveyText.paint()
-    sv = SurveyText(tx)
+    # tx = Text(text).cleaner()
+    tc = Counter(text)
+    sv = SurveyText(tc, text)
     sv.survey(20)
-    print(len(Text.TEXT.original))
+    print(len(text))
     # [print(t[a:a+10]) for a in range(0, len(t), 20)]
     # t.sort()
     t = sorted(sv.rebuff(20))
     print(len(t))
     [print(t[a:a+10]) for a in range(0, len(t), 20)]
+    sv.paint(relevancy=8, cof=20)
     return t
 
 
 if __name__ == '__main__':
     test()
+    # test_survey()
