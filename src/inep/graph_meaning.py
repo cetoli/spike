@@ -15,10 +15,24 @@ Changelog
 .. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
 
 """
+from cmath import log
+from itertools import chain as ch
+
 from configuration import TXT, TAG
 from collections import Counter
 STOPWORDS = "https://gitlab.com/cetoli/spike/-/raw/master/src/neurocomp/conf/stopwords.txt"
 """Remove as stopwords da especificação"""
+
+
+def scan(here, word, ori, rel, wind, size):
+    # start = here - wind if here >= wind else 0
+    # ender = here + wind if here + wind <= size else size
+    start, ender = max(0, here - wind), min(size, here + wind)
+    return [min((other, word), (word, other))
+            for other in ori[start:ender]
+            # if other == word or other not in rel or word not in rel
+            if other != word and other in rel and word in rel
+            ]
 
 
 class Text:
@@ -107,14 +121,14 @@ class SurveyText:
         size = len(original)
         # print("survey", size, original[:300])
         rlv = self.relevant
-        for here, word in enumerate(original):
-            start = here - window if here >= window else 0
-            ender = here + window if here + window <= size else size
-            for other in original[start:ender]:
-                if other == word or other not in rlv or word not in rlv:
-                    continue
-                entry = (other, word) if other < word else (word, other)
-                self.pairs[entry] = self.pairs.setdefault(entry, 0) + 1
+        import multiprocessing as mp
+        # print("Number of processors: ", mp.cpu_count())
+        pool = mp.Pool(mp.cpu_count())
+        # pairs = [scanner(here, word, original, rlv, window, size) for here, word in enumerate(original)]
+        pairs = pool.starmap(scan, [(here, word, original, rlv, window, size) for here, word in enumerate(original)])
+        self.pairs = Counter(ch.from_iterable(pairs))
+        print([(a, b, c) for (a, b), c in self.pairs.items() if c > 20])
+        pool.close()
         self.levels = Counter([i for (i, j), _ in self.pairs.items()])
         levels = Counter([j for (i, j), _ in self.pairs.items()])
         levels.update({key: value for key, value in self.levels.items() if key not in levels})
@@ -139,7 +153,7 @@ class SurveyText:
         relevant = {na: good for (na, nb), good in self.pairs.items()
                     if (good > relevancy) and (na in self.good) and (nb in self.good)
                     }
-        relevant.update({na: good for (_, na), good in self.pairs.items() if good > relevancy})
+        relevant.update({na: good for (_, na), good in self.pairs.items() if good > relevancy and na in self.good})
         node = {name: good for name, good in self.levels.items() if name in relevant}
         node = ({nd: cnt for nd, cnt in self.levels.items() if nd in node})
         return node.items()
@@ -180,10 +194,7 @@ class SurveyText:
         return self.relevant
 
     # noinspection SpellCheckingInspection
-    def paint(self, window=10, relevancy=20, cof=40):
-        # _ = self  # void statement to fool lint inspector
-        # st = SurveyText(Text.TEXT.clean)
-        self.survey(window)
+    def paint(self, relevancy=20, cof=90, top=80, size=30):
         print(self.show(relevancy))  # [:200])
         # print(st.nodes())
 
@@ -193,19 +204,57 @@ class SurveyText:
         # matrix = "yyyycccccccmmmmmmmmbbbbbbbbbggggggggggggrrrrrrrrrrrrrrrrrrr"
         ma = [x for x in matplotlib.colors.ColorConverter.colors.keys() if len(x) == 1]
         print(ma)
-        matrix = "ycmgbr"*200
+        matrix = "ycmgbr"*2000
         lm = len(matrix)-1
         colors = {wg: cl for wg, cl in enumerate(matrix)}
+        col = [colors[min(lm, max(1, w-cof))] for _, __, w in self.show(relevancy)]
         plt.rcParams["figure.figsize"] = [15.50, 8.50]
         plt.rcParams["figure.autolayout"] = True
         wg = nx.Graph()
-        _ = [wg.add_node(node, size=size) for node, size in self.nodes(relevancy)]
-        _ = [wg.add_edge(a, b, color=colors[max(lm, w-cof)], weight=w-cof) for a, b, w in self.show(relevancy)]
-        sizes = [wg.nodes[s]['size'] * 100 for s in wg.nodes]
-        color = [colors[wg.nodes[s]['size']] for s in wg.nodes]
+        skp = [
+            'bloco', 'learning', 'além', 'oreilly', 'aluno', 'ser', 'área', 'disso', 'ainda', 'ed', 'durante',
+            'instituição', 'aluno', 'reilly', 'view', 'oreilly', 'library', 'segurança', 'assim', 'contínua',
+            'instituição', 'and', 'área', 'base', 'disponível', 'informação', 'curso', 'trabalho',
+            'partir', 'processo', 'tempo', 'graduação', 'título', 'sendo', 'melhoria', 'própria', 'acordo',
+            'longo', 'meio', 'professor', 'ensino', 'aprendizagem', 'coordenação', 'mercado', 'distância',
+            'equipe', 'serviço', 'social', 'prática', 'forma', 'todo', 'parte', 'perfil', 'rede', 'egresso',
+            'of', 'acesso', 'p', 'sempre', 'aprendizado', 'tanto', 'organização', 'arquitetura', 'educacional',
+            'programa', 'bem', 'management', 'relação', 'sobre', 'guide', 'the', 'corpo',
+            'security', 'curso', 'acervo', 'curricular', 'rio', 'janeiro', 'nível', 'modo', 'm',
+            'lgpd', 'avaliação', 'infnet', 'todo', 'publishing', 'plano', 'lgpd', 'profissional', 'período', 'maior',
+            'microsoft', 'quanto', 'neste', 'podem', 'formação', 'professor', 'uso', 'modalidade', 'extensão',
+            "possui", "sp", "curitiba", "pearson", "bookman", "apoio", "brasil", "br", "cruzeiro", "horária", "rj",
+            "alegre", "paulo", "porto", "sagah", "pode", "sul", "df", "desde", "carga", "favip",
+            "portaria", "colegiado", "login", "bvirtual", "ebscohost", "minhabiblioteca", "wyden", "unifavip",
+            "etc", "dentro", "parágrafo", "conformr", "mediante", "reitoria", "isbn", "deve", "art", "secretaria",
+            "uniabeu", "número", "conforme", "único", "uniasselvi", "tabela", "vida", "leonardo", "vinci",
+            "ºn", "nº", "sob", "nesta", "t", "l", "sc", "http", "permite", "unicesumar", "studeo", "ce", "ba", "pa"
+            "garantir", "santa", "brasileira", "maringá", "nacional", "index", "mg", "ma", "pr", "doi", "pe",
+            "sério", "têm", "jan", "qualquer", "conclusão", "junto", "matrícula", "capítulo", "onde",
+            "ch", "william", "out", "min", "n", "ha", "considerando", "unicarioca", "issn", "º", "unipar",
+            "umuarama", "degead", "vivo", "deste", "onde", "desta", "jundiaí", "saraiva", "gen", "silva",
+            "anhanguera", "ampli", "capaz", "nesse", "paraná", "faveni", "abeu",
+            "cinco", "ch", "hr", "editora", "ppt", "outro", "pucpr", 'nota', 'maneira'
+        ]
+        edger = 15
+
+        [self.good.remove(ng) for ng in skp if ng in self.good]
+        good = ch([[a, b] for a, b, _ in self.show(edger)])
+        # ?top = 200
+        siz = {node: size for node, size in self.nodes(relevancy) if node not in skp and node in good}
+        _ = [wg.add_node(node, size=size) for node, size in siz.items()]
+        _ = [wg.add_edge(a, b, color=colors[max(lm, w-cof)], weight=(log((min(top, w-cof)+0.01)*20).real or 1)/100000)
+             for a, b, w in self.show(edger)]
+        # sizes = [1.0 for _, size in self.nodes(relevancy)]  #
+        sizes = [int(log(siz[s]+0.0001 if s in siz else 5).real * size) for s, n in wg.nodes.items()]
+        t = list(set(wg.nodes.keys()).difference(set(siz.keys())))
+        [print(t[a:a + 10]) for a in range(0, len(t), 20)]
+
+        color = [colors[a] for a, _ in enumerate(wg.nodes)]
+        # color = [colors[wg.nodes[s]['size']] for s in wg.nodes]
 
         '''Node can be called by any python-hashable obj like string,number etc'''
-        nx.draw(wg, with_labels=True, node_size=sizes, node_color=color)
+        nx.draw(wg, with_labels=True, node_size=sizes, edge_color=col, node_color=color)
         # draws the networkx graph containing nodes which are declared till before
         plt.show()  # displays the networkx graph on matplotlib canvas
 
@@ -235,7 +284,11 @@ def test(text=None):
     from tinydb import TinyDB, Query
     db = TinyDB(dados)
     query = Query()
-    x = db.search(query.coid == '1620488')
+    cs = ['1598939', '1549921', '1594810', '1625436', '1620561', '1667219', '1617841', '1537675',
+          '1517110', '1620488', '1588016', '1666036', '1599632', '1615338', '1671887', '1618022',
+          '153693', '1550008', '1617840', '1617717', '1565359', '1619434', '1667554']
+
+    x = db.search(query.coid == cs[22])  # 3 7 -8 9 -11 -14 16 ++18 ++21
     t = text or x[0]["content"]
     t = test(t)
     main(t)
@@ -253,22 +306,26 @@ def test_survey(text=None):
     db = TinyDB(dados)
     query = Query()
     x = db.search(query.coid == '1620488')
+    y = db.all()
+    oid = [cs["coid"] for cs in y]
+    print(oid)
     t = text or x[0]["content"]
-    main(t)
+    # main(t)
 
 
 def main(text=None):
     # tx = Text(text).cleaner()
     tc = Counter(text)
-    sv = SurveyText(tc, text)
-    sv.survey(20)
+    releva = 30
+    sv = SurveyText(tc, text, relevancy=releva)
+    sv.survey()
     print(len(text))
     # [print(t[a:a+10]) for a in range(0, len(t), 20)]
     # t.sort()
     t = sorted(sv.rebuff(20))
     print(len(t))
     [print(t[a:a+10]) for a in range(0, len(t), 20)]
-    sv.paint(relevancy=8, cof=20)
+    sv.paint(relevancy=releva, cof=50, top=15, size=240)
     return t
 
 
