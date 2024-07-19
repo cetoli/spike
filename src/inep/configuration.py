@@ -5,6 +5,9 @@ Changelog
 .. versionadded::    24.06
     |br| first version of config (22)
 
+.. versionadded::    24.07
+    |br| new tags from Syllabus (22)
+
 |   **Open Source Notification:** This file is part of open source program **INEP**
 |   **Copyright © 2023  Carlo Oliveira** <carlo@nce.ufrj.br>,
 |   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <https://is.gd/3Udt>`_.
@@ -18,18 +21,23 @@ TAG = (
     ("0612B01", "Banco de dados"),
     ("0612D01", "Defesa cibernética"),
     ("0612D01", "Cibersegurança"),
+    ("0612D01", "Ciberseguranca"),
     ("0612D01", "Segurança cibernética"),
     ("0612D01", "segurança de software"),
     ("0612G01", "Gestão da tecnologia da informação"),
     ("0612G01", "Gestão de ti"),
+    ("0612G01", "Devops"),
     ("0612R01", "Redes de computadores"),
     ("0613E01", "Engenharia de software"),
     ("0613J01", "Jogos digitais"),
     ("0614C01", "Ciência da computação"),
     ("0614I01", "Inteligência artificial"),
     ("0615S01", "Segurança da informação"),
+    ("0615S01", "Segurança Digital"),
     ("0615S02", "Sistemas de informação"),
+    ("0615S02", "Desenvolvimento Fullstack"),
     ("0615S03", "Sistemas para internet"),
+    ("0615S03", "Desenvolvimento Mobile"),
     ("0616E01", "Engenharia de computação"),
     ("0616E01", "Engenharia da computação"),
     ("0616I01", "Internet das coisas"),
@@ -669,7 +677,7 @@ def aux():
 
 
 def main():
-    t =[c for c, p in CURSO]
+    t = [c for c, p in CURSO]
     tg = dict(TAG)
     # [print(f"a{b}='{a}' #{c.replace(' ', '_')}") for a,(b, c) in zip(t, TAG)]
     s = [(a, b, a[1:]) for a, b in SUPER.items()]

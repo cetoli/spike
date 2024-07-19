@@ -1,0 +1,753 @@
+curso_id,nome_disciplina,rotulo,horas,nomeado
+1666036,Projeto Integrador - Elementos e Conceitos de CiberSegurança,0612D01-defesa cibernética,70,defesa cibernética
+1666036,Sistemas Computacionais para CiberSegurança,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Estudo do Espaço Cibernético,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Lógica Matemática,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Teologia e Fenômeno Humano,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Vida Universitária e Desenvolvimento Integral,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Programa de Formação Complementar em Matemática,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Tecnologias para Cibersegurança,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Projeto Integrador - CiberSegurança e Criptografia,0612D01-defesa cibernética,70,defesa cibernética
+1666036,Algoritmo e Estrutura de Dados,0612D01-defesa cibernética,95,defesa cibernética
+1666036,Princípios Matemático de Criptografia,0612D01-defesa cibernética,32,defesa cibernética
+1666036,CiberSegurança em Sistemas Operacionais,0612D01-defesa cibernética,63,defesa cibernética
+1666036,"Métodos, Normas e Padrões em CiberSegurança",0612D01-defesa cibernética,63,defesa cibernética
+1666036,Ética e Antropologia Teológica,0612D01-defesa cibernética,32,defesa cibernética
+1666036,PF - Práticas de Formação I,0612D01-defesa cibernética,16,defesa cibernética
+1666036,Projeto Integrador - CiberSegurança em Redes e Infraestrutura,0612D01-defesa cibernética,70,defesa cibernética
+1666036,Algoritmo e Estrutura de Dados,0612D01-defesa cibernética,95,defesa cibernética
+1666036,Organização e Arquitetura de Computadores - CiberSegurança,0612D01-defesa cibernética,63,defesa cibernética
+1666036,CiberSegurança em Redes de Computadores,0612D01-defesa cibernética,95,defesa cibernética
+1666036,Computação Forense,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Atividades Complementares I - CiberSegurança,0612D01-defesa cibernética,65,defesa cibernética
+1666036,Projeto Integrador - CiberSegurança em Programação Segura,0612D01-defesa cibernética,70,defesa cibernética
+1666036,Cibersegurança em Banco de Dados,0612D01-defesa cibernética,95,defesa cibernética
+1666036,Criptografia Simétrica e Assimétrica,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Programação Orientada a Objetos - CiberSegurança,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Desenvolvimento Seguro de Software,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Teologia e Sociedade,0612D01-defesa cibernética,48,defesa cibernética
+1666036,PF: Práticas de Formação II,0612D01-defesa cibernética,16,defesa cibernética
+1666036,Projeto Integrador - CiberSegurança de Borda e em Sistemas Distribuídos,0612D01-defesa cibernética,70,defesa cibernética
+1666036,Inteligência Artificial em CiberSegurança,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Sistemas Paralelos e Distribuídos - Programação e Segurança,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Sistemas Ciberfísicos e IoT,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Técnicas Avançadas de Criptografia,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Engenharia Reversa de Software,0612D01-defesa cibernética,63,defesa cibernética
+1666036,"Educação em Direitos Humanos: História, Cultura e Meio Ambiente",0612D01-defesa cibernética,48,defesa cibernética
+1666036,Projeto Integrador - Computação em Nuvem e Novos Modelos Computacionais de CiberSegurança,0612D01-defesa cibernética,70,defesa cibernética
+1666036,Computacionais de CiberSegurança,0612D01-defesa cibernética,70,defesa cibernética
+1666036,CiberSegurança em Computação em Nuvem,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Programação para WEB e dispositivos Móveis,0612D01-defesa cibernética,95,defesa cibernética
+1666036,CiberSegurança de Sistemas,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Modelagem de Ameaças,0612D01-defesa cibernética,63,defesa cibernética
+1666036,PF: Práticas de Formação III,0612D01-defesa cibernética,16,defesa cibernética
+1666036,Atividades Complementares II - CiberSegurança,0612D01-defesa cibernética,65,defesa cibernética
+1666036,Tópicos em CiberSegurança I,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Projeto Aplicado I - CiberSegurança,0612D01-defesa cibernética,101,defesa cibernética
+1666036,Governança de CiberSegurança,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Gestão de Riscos em CiberSegurança,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Segurança Defensiva e Ofensiva,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Sistemas de Detecção e Prevenção de Intrusão,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Atividades Complementares III - CiberSegurança,0612D01-defesa cibernética,65,defesa cibernética
+1666036,Tópicos em CiberSegurança II,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Projeto Aplicado II - CiberSegurança,0612D01-defesa cibernética,101,defesa cibernética
+1666036,Plano de Privacidade em CiberSegurança,0612D01-defesa cibernética,63,defesa cibernética
+1666036,Direito Digital Nacional e Internacional,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Inteligência e Espionagem em CiberSegurança,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Relações Internacionais e CiberSegurança,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Usabilidade e Experiência do Usuário em CiberSegurança,0612D01-defesa cibernética,32,defesa cibernética
+1666036,Atividades Complementares IV - CiberSegurança,0612D01-defesa cibernética,59,defesa cibernética
+1666036,__TOTAL__,0612D01-defesa cibernética,3204,defesa cibernética
+1671887,Ambientação Digital,0612D01-defesa cibernética,10,defesa cibernética
+1671887,Algoritmos,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Sistemas Operacionais,0612D01-defesa cibernética,60,defesa cibernética
+1671887,Computação em Nuvem,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Segurança da Informação,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Programação de Computadores,0612D01-defesa cibernética,40,defesa cibernética
+1671887,Plano de Acompanhamento de Carreira em Cibersegurança,0612D01-defesa cibernética,10,defesa cibernética
+1671887,Integração de Competências para Transformar o Eu,0612D01-defesa cibernética,50,defesa cibernética
+1671887,Tecnologias de Redes,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Análise e Controle de Risco,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Administração de Serviços,0612D01-defesa cibernética,60,defesa cibernética
+1671887,Segurança de Sistemas para Internet,0612D01-defesa cibernética,40,defesa cibernética
+1671887,Sistemas Linux,0612D01-defesa cibernética,60,defesa cibernética
+1671887,Plano de Acompanhamento de Carreira em Cibersegurança I,0612D01-defesa cibernética,10,defesa cibernética
+1671887,"Integração de Competências para Transformar o Eu, o Outro e a Sociedade",0612D01-defesa cibernética,50,defesa cibernética
+1671887,Criptografia,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Modelos de Governança da Tecnologia da Informação,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Programação de Redes,0612D01-defesa cibernética,40,defesa cibernética
+1671887,Gestão e Análise de Riscos,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Segurança em Sistemas Operacionais,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Tópicos Especiais em Cibersegurança I,0612D01-defesa cibernética,60,defesa cibernética
+1671887,Projeto Integrado Transdisciplinar em Cibersegurança I,0612D01-defesa cibernética,60,defesa cibernética
+1671887,Atividade de Extensão: Integração de Competências em Cibersegurança I,0612D01-defesa cibernética,50,defesa cibernética
+1671887,Computação Forense,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Segurança Defensiva – Blue Team,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Tópicos Avançados em Segurança da Informação,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Tópicos Especiais em Cibersegurança II,0612D01-defesa cibernética,60,defesa cibernética
+1671887,Ethical Hacking,0612D01-defesa cibernética,80,defesa cibernética
+1671887,Projeto Integrador Transdisciplinar em Cibersegurança II,0612D01-defesa cibernética,60,defesa cibernética
+1671887,Atividade de Extensão: Integração de Competências em Cibersegurança II,0612D01-defesa cibernética,50,defesa cibernética
+1671887,Língua Brasileira de Sinais,0612D01-defesa cibernética,40,defesa cibernética
+1671887,__TOTAL__,0612D01-defesa cibernética,2000,defesa cibernética
+1598939,Ambientação Digital,0613E01-Engenharia de software,20,Engenharia de software
+1598939,Aplicações para Internet,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Engenharia de Requisitos e Processos de Software,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Tratamento de Imagens Gráfica e Digital,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Língua Portuguesa,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Interface Humano-Computador,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Programação de Computadores,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Sistemas Operacionais Mobiles,0613E01-Engenharia de software,60,Engenharia de software
+1598939,Plano de Acompanhamento de Carreira em Desenvolvimento Mobile,0613E01-Engenharia de software,10,Engenharia de software
+1598939,Atividades de Extensão: Integração de Competências para Transformar o Eu,0613E01-Engenharia de software,50,Engenharia de software
+1598939,Processos Ágeis de Desenvolvimento,0613E01-Engenharia de software,60,Engenharia de software
+1598939,Modelagem de Dados,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Técnicas de Desenvolvimento de Algoritmos,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Design de Experiência do Usuário,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Programação Web,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Programação Orientada a Objetos,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Plano de Acompanhamento de Carreira em Desenvolvimento Mobile I,0613E01-Engenharia de software,10,Engenharia de software
+1598939,"Atividades de Extensão: Integração de Competências para Transformar o Eu, o Outro e a Sociedade",0613E01-Engenharia de software,50,Engenharia de software
+1598939,Banco de Dados,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Arquitetura para Aplicações Móveis,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Soluções Web/Mobile,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Computação em Nuvem,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Desenvolvimento Mobile I,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Segurança em Dispositivos Móveis,0613E01-Engenharia de software,60,Engenharia de software
+1598939,Tópicos Especiais em Desenvolvimento Mobile I,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Plano de Acompanhamento de Carreira em Desenvolvimento Mobile II,0613E01-Engenharia de software,10,Engenharia de software
+1598939,Atividades de Extensão: Integração de Competências em Desenvolvimento Mobile I,0613E01-Engenharia de software,50,Engenharia de software
+1598939,Arquitetura de Sistemas Distribuídos,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Desenvolvimento Mobile II,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Negócios Digitais,0613E01-Engenharia de software,60,Engenharia de software
+1598939,Tópicos Especiais em Dispositivos Móveis,0613E01-Engenharia de software,80,Engenharia de software
+1598939,Desenvolvimento de Aplicações para Internet das Coisas,0613E01-Engenharia de software,60,Engenharia de software
+1598939,Tópicos Especiais em Desenvolvimento Mobile II,0613E01-Engenharia de software,40,Engenharia de software
+1598939,Projeto Integrador Transdisciplinar em Desenvolvimento Mobile,0613E01-Engenharia de software,60,Engenharia de software
+1598939,Plano de Acompanhamento de Carreira em Desenvolvimento Mobile III,0613E01-Engenharia de software,10,Engenharia de software
+1598939,Atividades de Extensão: Integração de Competências em Desenvolvimento Mobile II,0613E01-Engenharia de software,50,Engenharia de software
+1598939,Língua Brasileira de Sinais,0613E01-Engenharia de software,40,Engenharia de software
+1598939,__TOTAL__,0613E01-Engenharia de software,2000,Engenharia de software
+1565359,Arquitetura e Organização de Computadores,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Legislação Aplicada à Tecnologia da Informação,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Algoritmos e Fundamentos de Programação de Computadores,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Fundamentos de Programação Mobile,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Língua Brasileira de Sinais – LIBRAS,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Noções de Ciências Sociais,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Desenvolvimento Mobile,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Empreendedorismo e Processos de Negócios,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Sistemas Operacionais Mobile,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Programação Orientada a Objetos,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Tecnologias de Animação e Programação,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Banco de Dados,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Análise e Modelagem de Sistemas Mobile,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Programação e Desenvolvimento de Banco de Dados Mobile,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Inovação e Design Thinking,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Design de Interfaces Humano/Computador,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Programação de Dispositivos Móveis,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Implementação de IoT,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Desenvolvimento de Aplicações Android,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Desenvolvimento de Aplicações IOS,0613E01-Engenharia de software,90,Engenharia de software
+1565359,Segurança para Sistemas Mobile,0613E01-Engenharia de software,90,Engenharia de software
+1565359,__TOTAL__,0613E01-Engenharia de software,2067,Engenharia de software
+1550008,SISTEMAS OPERACIONAIS,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,GOVERNANÇA CORPORATIVA,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,REDES DE COMPUTADORES,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,SOCIEDADE BRASILEIRA E CIDADANIA,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PROJETO INTEGRADO I,0612D01-Defesa cibernética,90,Defesa cibernética
+1550008,LINGUAGEM DE PROGRAMAÇÃO,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,MODELAGEM DE DADOS,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,LÓGICA E MATEMÁTICA COMPUTACIONAL,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PROGRAMAÇÃO E DESENVOLVIMENTO DE BANCO DE DADOS,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PROJETO DE EXTENSÃO I - CIBERSEGURANÇA,0612D01-Defesa cibernética,115,Defesa cibernética
+1550008,ARQUITETURA DE REDES,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,ARQUITETURA DE SEGURANÇA,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,SEGURANÇA EM ENGENHARIA DE SOFTWARE,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,GOVERNANÇA DE SEGURANÇA,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PRIVACIDADE E PROTEÇÃO DE DADOS,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PROJETO INTEGRADO II,0612D01-Defesa cibernética,90,Defesa cibernética
+1550008,ADMINISTRAÇÃO DE SISTEMAS OPERACIONAIS,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,GESTÃO DE CONTINUIDADE DE NEGÓCIO,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,SEGURANÇA OFENSIVA - ETHICAL HACKING - RED TEAM,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,SEGURANÇA DA INFORMAÇÃO E DE REDES,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PROJETO DE EXTENSÃO II - CIBERSEGURANÇA,0612D01-Defesa cibernética,115,Defesa cibernética
+1550008,COMPUTAÇÃO EM NUVEM,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,GERENCIAMENTO DE REDES,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PERÍCIA FORENSE EM SEGURANÇA DA INFORMAÇÃO,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PROGRAMAÇÃO PARA REDES,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,SEGURANÇA DEFENSIVA - BLUE TEAM,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,CRIPTOGRAFIA,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,PROJETO INTEGRADO III,0612D01-Defesa cibernética,90,Defesa cibernética
+1550008,LIBRAS - LÍNGUA BRASILEIRA DE SINAIS,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,DIREITO CIBERNÉTICO,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,ARQUITETURA DE COMPUTAÇÃO EM NUVEM,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,RESPONSABILIDADE SOCIAL E AMBIENTAL,0612D01-Defesa cibernética,60,Defesa cibernética
+1550008,__TOTAL__,0612D01-Defesa cibernética,2100,Defesa cibernética
+1537675,PROJETO DE SOFTWARE,0615S03-sistemas para internet,60,sistemas para internet
+1537675,ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES,0615S03-sistemas para internet,60,sistemas para internet
+1537675,SEGURANÇA E AUDITORIA DE SISTEMAS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,INTERFACE E USABILIDADE,0615S03-sistemas para internet,60,sistemas para internet
+1537675,PROJETO INTEGRADO I,0615S03-sistemas para internet,110,sistemas para internet
+1537675,ENGENHARIA DE SOFTWARE,0615S03-sistemas para internet,60,sistemas para internet
+1537675,LINGUAGEM DE PROGRAMAÇÃO,0615S03-sistemas para internet,60,sistemas para internet
+1537675,LÓGICA E MATEMÁTICA COMPUTACIONAL,0615S03-sistemas para internet,60,sistemas para internet
+1537675,ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA,0615S03-sistemas para internet,60,sistemas para internet
+1537675,ANÁLISE E MODELAGEM DE SISTEMAS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,PROJETO DE EXTENSÃO I - DESENVOLVIMENTO MOBILE,0615S03-sistemas para internet,90,sistemas para internet
+1537675,ANÁLISE ORIENTADA A OBJETOS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,LINGUAGEM ORIENTADA A OBJETOS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,MODELAGEM DE DADOS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,DESENVOLVIMENTO MOBILE,0615S03-sistemas para internet,60,sistemas para internet
+1537675,PROGRAMAÇÃO E DESENVOLVIMENTO DE BANCO DE DADOS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,PROJETO INTEGRADO II,0615S03-sistemas para internet,110,sistemas para internet
+1537675,DESENVOLVIMENTO DE APLICAÇÕES ANDROID,0615S03-sistemas para internet,60,sistemas para internet
+1537675,DESENVOLVIMENTO DE APLICAÇÕES IOS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,PROJETOS DE DESENVOLVIMENTO DE GAMES,0615S03-sistemas para internet,60,sistemas para internet
+1537675,SOCIEDADE BRASILEIRA E CIDADANIA,0615S03-sistemas para internet,60,sistemas para internet
+1537675,SISTEMAS OPERACIONAIS MOBILE,0615S03-sistemas para internet,60,sistemas para internet
+1537675,PROJETO DE EXTENSÃO II - DESENVOLVIMENTO MOBILE,0615S03-sistemas para internet,90,sistemas para internet
+1537675,LIBRAS - LÍNGUA BRASILEIRA DE SINAIS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,CRIPTOGRAFIA,0615S03-sistemas para internet,60,sistemas para internet
+1537675,REDES DE COMPUTADORES,0615S03-sistemas para internet,60,sistemas para internet
+1537675,COMPUTAÇÃO EM NUVEM,0615S03-sistemas para internet,60,sistemas para internet
+1537675,PRIVACIDADE E PROTEÇÃO DE DADOS,0615S03-sistemas para internet,60,sistemas para internet
+1537675,RESPONSABILIDADE SOCIAL E AMBIENTAL,0615S03-sistemas para internet,60,sistemas para internet
+1537675,__TOTAL__,0615S03-sistemas para internet,1700,sistemas para internet
+153693,PROJETO DE SOFTWARE,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,SEGURANÇA E AUDITORIA DE SISTEMAS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,SOCIEDADE BRASILEIRA E CIDADANIA,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,PROJETO INTEGRADO I,0612G01-gestão da tecnologia da informação,110,gestão da tecnologia da informação
+153693,ENGENHARIA DE SOFTWARE,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,LINGUAGEM DE PROGRAMAÇÃO,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,LÓGICA E MATEMÁTICA COMPUTACIONAL,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,ANÁLISE E MODELAGEM DE SISTEMAS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,PROJETO DE EXTENSÃO I,0612G01-gestão da tecnologia da informação,90,gestão da tecnologia da informação
+153693,ANÁLISE ORIENTADA A OBJETOS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,PROGRAMAÇÃO E DESENVOLVIMENTO DE BANCO DE DADOS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,MODELAGEM DE DADOS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,INFRAESTRUTURA ÁGIL,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,REDES E SISTEMAS DISTRIBUÍDOS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,PROJETO INTEGRADO II,0612G01-gestão da tecnologia da informação,110,gestão da tecnologia da informação
+153693,DESENVOLVIMENTO E MONITORAMENTO DE DASHBOARDS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,MONITORAMENTO E INDICADORES,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,LINGUAGEM ORIENTADA A OBJETOS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,ENTREGA E IMPLANTAÇÃO CONTÍNUA,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,QUALIDADE E AUTOMAÇÃO DE TESTES,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,PROJETO DE EXTENSÃO II,0612G01-gestão da tecnologia da informação,90,gestão da tecnologia da informação
+153693,LIBRAS - LÍNGUA BRASILEIRA DE SINAIS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,RESPONSABILIDADE SOCIAL E AMBIENTAL,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,PRIVACIDADE E PROTEÇÃO DE DADOS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,GESTÃO DE PROJETOS,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,SISTEMAS DE INFORMAÇÃO GERENCIAL,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+153693,__TOTAL__,0612G01-gestão da tecnologia da informação,1700,gestão da tecnologia da informação
+1625436,RACIOCÍNIO LÓGICO,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,FUNDAMENTOS DE REDES DE COMPUTADORES,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,ARQUITETURA DE COMPUTADORES,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,FUNDAMENTOS DE SEGURANÇA CIBERNÉTICA,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,BANCO DE DADOS,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,MATEMÁTICA PARA COMPUTAÇÃO,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,PROGRAMAÇÃO PYTHON,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,ARQUITETURA DE REDES DE COMPUTADORES,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,SISTEMAS OPERACIONAIS,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,ÉTICA E RESPONSABILIDADE SOCIAL,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,COMPUTAÇÃO EM NUVEM,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,MÉTODOS DE CRIPTOGRAFIA,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,CONFIGURAÇÃO E SERVIÇO DE REDES,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,ADMINISTRAÇÃO DE REDES WINDOWS E LINUX,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,FORENSE COMPUTACIONAL,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,INTERNET DAS COISAS,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,SEGURANÇA CIBERNÉTICA COM INTELIGENCIA ARTIFICIAL,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,PROJETO DE DESENVOLVIMENTO SEGURO DE REDES NETSEC E OWASP,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,TRATAMENTO DE INCIDENTES DE SEGURANÇA,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,SEGURANÇA CIBERNÉTICA: ETHICAL HACKING,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,OPERAÇÕES DE SEGURANÇA NOC E SOC,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,SEGURANÇA DE AUTOMAÇÃO,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,ORIENTAÇÃO E PRÁTICAS DE EXTENSÃO EM SEGURANÇA DIGITAL,0612D01-Defesa cibernética,60,Defesa cibernética
+1625436,PROJETO DE PROTEÇÃO DE SISTEMAS OPERACIONAIS CYBEROPS,0612D01-Defesa cibernética,160,Defesa cibernética
+1625436,__TOTAL__,0612D01-Defesa cibernética,1600,Defesa cibernética
+1617717,Redes de Computadores,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Fundamentos e Arquitetura de Computadores,0612D01-defesa cibernética,80,defesa cibernética
+1617717,GO - Projeto de Vida,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Gestão de Serviços em TI,0612D01-defesa cibernética,80,defesa cibernética
+1617717,"Produção do Conhecimento Científico, Tecnológico e Disrupção",0612D01-defesa cibernética,80,defesa cibernética
+1617717,Sistemas Operacionais,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Cibersegurança,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Linguagem de Programação,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Mentalidade Criativa e Empreendedora,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Segurança e Auditoria de Sistemas,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Administração de Redes Windows,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Técnicas de Hacking em Hardware,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Perícia Forense Computacional,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Administração de Redes Linux,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Imersão Profissional: Administração de SO e Serviços,0612D01-defesa cibernética,60,defesa cibernética
+1617717,Inteligência e Ameaça Cibernética,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Gestão de Projetos Tecnológicos,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Imersão Profissional: Controle de Ameaça Cibernética,0612D01-defesa cibernética,60,defesa cibernética
+1617717,Análise de Malware e Engenharia Reversa,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Cloud Computing,0612D01-defesa cibernética,80,defesa cibernética
+1617717,"Estudo Contemporâneo e Transversal: Autonomia Intelectual, Relação de Consumo e Sustentabilidade",0612D01-defesa cibernética,40,defesa cibernética
+1617717,Imersão profissional: Prática de Engenharia Reversa,0612D01-defesa cibernética,60,defesa cibernética
+1617717,Direito Digital,0612D01-defesa cibernética,80,defesa cibernética
+1617717,Ethical Hacker,0612D01-defesa cibernética,80,defesa cibernética
+1617717,"Estudo Contemporâneo e Transversal: Relações Étnico-Raciais, Cultura e Direitos Humanos",0612D01-defesa cibernética,40,defesa cibernética
+1617717,Imersão profissional: Avaliação da Segurança de Sistemas,0612D01-defesa cibernética,60,defesa cibernética
+1617717,LIBRAS,0612D01-defesa cibernética,80,defesa cibernética
+1617717,__TOTAL__,0612D01-defesa cibernética,2178,defesa cibernética
+1615338,INTERFACE HUMANO-COMPUTADOR,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,FUNDAMENTOS E ARQUITETURA DE COMPUTADORES,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,GO PROJETO DE VIDA,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,PROGRAMAÇÃO FRONT END,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,"PRODUÇÃO DO CONHECIMENTO CIENTÍFICO, TECNOLÓGICO E DISRUPÇÃO",0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,ENGENHARIA DE SOFTWARE,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,ALGORITMOS E LÓGICA DE PROGRAMAÇÃO,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,LINGUAGEM DE PROGRAMAÇÃO,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,MENTALIDADE CRIATIVA E EMPREENDEDORA,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,ANÁLISE E PROJETO ORIENTADO A OBJETOS,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,PROJETO DE APLICAÇÕES MÓVEIS,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,DESIGN GRÁFICO,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,BANCO DE DADOS,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,BANCO DE DADOS NoSQL,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,IMERSÃO PROFISSIONAL: PROJETO DE BANCO DE DADOS PARA APLICATIVO,0615S03-Sistemas para internet,60,Sistemas para internet
+1615338,PROGRAMAÇÃO ORIENTADA A OBJETOS,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,GESTÃO DE PROJETOS TECNOLÓGICOS,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,IMERSÃO PROFISSIONAL: PROJETO DE APLICATIVO ORIENTADO A OBJETOS,0615S03-Sistemas para internet,60,Sistemas para internet
+1615338,DESENVOLVIMENTO DE APLICAÇÕES ANDROID,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,CLOUD COMPUTING,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,IMERSÃO PROFISSIONAL: CRIANDO UMA APLICAÇÃO ANDROID,0615S03-Sistemas para internet,60,Sistemas para internet
+1615338,"ESTUDO CONTEMPORÂNEO E TRANSVERSAL: AUTONOMIA INTELECTUAL, RELAÇÃO DE CONSUMO E SUSTENTABILIDADE",0615S03-Sistemas para internet,40,Sistemas para internet
+1615338,DESENVOLVIMENTO DE APLICAÇÕES IOS,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,APLICAÇÕES HÍBRIDAS E IOT,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,IMERSÃO PROFISSIONAL: FÁBRICA DE SOFTWARE – APLICAÇÃO HÍBRIDA,0615S03-Sistemas para internet,60,Sistemas para internet
+1615338,"ESTUDO CONTEMPORÂNEO E TRANSVERSAL: RELAÇÕES ÉTNICO-RACIAIS, CULTURA E DIREITOS HUMANOS",0615S03-Sistemas para internet,40,Sistemas para internet
+1615338,LIBRAS,0615S03-Sistemas para internet,80,Sistemas para internet
+1615338,__TOTAL__,0615S03-Sistemas para internet,2178,Sistemas para internet
+1617840,PERSPECTIVAS PROFISSIONAIS,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,ARQUITETURA DE COMPUTADORES,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,LÓGICA E TÉCNICAS DE PROGRAMAÇÃO,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,SEGURANÇA E TECNOLOGIA DA INFORMAÇÃO,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,IMERSÃO PROFISSIONAL: CARREIRA E SUCESSO,0612D01-Defesa cibernética,40,Defesa cibernética
+1617840,PRODUÇÃO DO CONHECIMENTO CIENTÍFICO E TECNOLOGIAS IMERGENTES,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,INFRAESTRUTURA DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,CIBERSEGURANÇA,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,SISTEMAS E APLICAÇÕES DISTRIBUÍDAS,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,IMERSÃO PROFISSIONAL: DESAFIOS CONTEMPORÂNEOS,0612D01-Defesa cibernética,40,Defesa cibernética
+1617840,EMPREENDEDORISMO CRIATIVO,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,TEORIA GERAL DO DIREITO DIGITAL,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,HACKING EM HARDWARE,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,PERÍCIA DIGITAL,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,IMERSÃO PROFISSIONAL: HACKING E PERÍCIA DIGITAL,0612D01-Defesa cibernética,40,Defesa cibernética
+1617840,CIDADANIA E PROTAGONISMO SOCIAL,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,CLOUD COMPUTING E DEPLOY NA NUVEM,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,SISTEMAS OPERACIONAIS PARA REDES,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,AMEAÇA CIBERNÉTICA E INTELIGÊNCIA,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,IMERSÃO PROFISSIONAL: PREVENÇÃO DE ATAQUES CIBERNÉTICOS,0612D01-Defesa cibernética,40,Defesa cibernética
+1617840,"ESTUDO CONTEMPORÂNEO E TRANSVERSAL: INDÚSTRIA, TRANSFORMAÇÃO DIGITAL E INOVAÇÃO",0612D01-Defesa cibernética,10,Defesa cibernética
+1617840,FUNDAMENTOS DE ETHICAL HACKING,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,ENGENHARIA REVERSA E ANÁLISE DE MALWARE,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,GERENCIAMENTO DE PROJETO E GOVERNANÇA DE TI,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,TECNOLOGIAS EMERGENTES EM CIBERSEGURANÇA,0612D01-Defesa cibernética,80,Defesa cibernética
+1617840,IMERSÃO PROFISSIONAL: ENGENHARIA REVERSA E DEFESA CIBERNÉTICA,0612D01-Defesa cibernética,40,Defesa cibernética
+1617840,"ESTUDO CONTEMPORÂNEO E TRANSVERSAL: PROPRIEDADE INTELECTUAL, LEITURA DE IMAGENS, GRÁFICOS E MAPAS",0612D01-Defesa cibernética,10,Defesa cibernética
+1617840,__TOTAL__,0612D01-Defesa cibernética,2063,Defesa cibernética
+1617841,PERSPECTIVAS PROFISSIONAIS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,SEGURANÇA EM DISPOSITIVOS MÓVEIS E AMBIENTE WEB,0615S03-sistemas para internet,80,sistemas para internet
+1617841,LÓGICA E TÉCNICAS DE PROGRAMAÇÃO,0615S03-sistemas para internet,80,sistemas para internet
+1617841,INTERAÇÃO HUMANO COMPUTADOR,0615S03-sistemas para internet,80,sistemas para internet
+1617841,IMERSÃO PROFISSIONAL: CARREIRA E SUCESSO,0615S03-sistemas para internet,40,sistemas para internet
+1617841,PRODUÇÃO DO CONHECIMENTO CIENTÍFICO E TECNOLOGIAS IMERGENTES,0615S03-sistemas para internet,80,sistemas para internet
+1617841,ENGENHARIA E PROJETO DE SOFTWARE,0615S03-sistemas para internet,80,sistemas para internet
+1617841,FUNDAMENTOS DE REDES DE COMPUTADORES,0615S03-sistemas para internet,80,sistemas para internet
+1617841,INTRODUÇÃO AO DESENVOLVIMENTO DE SISTEMAS WEB,0615S03-sistemas para internet,80,sistemas para internet
+1617841,IMERSÃO PROFISSIONAL: DESAFIOS CONTEMPORÂNEOS,0615S03-sistemas para internet,40,sistemas para internet
+1617841,EMPREENDEDORISMO CRIATIVO,0615S03-sistemas para internet,80,sistemas para internet
+1617841,BANCO DE DADOS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,GERÊNCIA DE PROJETOS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,DESENVOLVIMENTO DE APLICAÇÕES MÓVEIS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,IMERSÃO PROFISSIONAL: PROJETO DE APLICAÇÕES MÓVEIS,0615S03-sistemas para internet,40,sistemas para internet
+1617841,CIDADANIA E PROTAGONISMO SOCIAL,0615S03-sistemas para internet,80,sistemas para internet
+1617841,ANÁLISE ORIENTADA A OBJETOS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,PROGRAMAÇÃO ORIENTADA A OBJETOS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,DESENVOLVIMENTO DE APLICAÇÕES PARA ANDROID,0615S03-sistemas para internet,80,sistemas para internet
+1617841,IMERSÃO PROFISSIONAL: PROJETO DE APLICATIVO ANDROID,0615S03-sistemas para internet,40,sistemas para internet
+1617841,"ESTUDO CONTEMPORÂNEO E TRANSVERSAL: INDÚSTRIA, TRANSFORMAÇÃO DIGITAL E INOVAÇÃO",0615S03-sistemas para internet,10,sistemas para internet
+1617841,DESENVOLVIMENTO DE APLICAÇÕES PARA IOS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,DESENVOLVIMENTO DE APLICAÇÕES HÍBRIDAS E IOT,0615S03-sistemas para internet,80,sistemas para internet
+1617841,PROGRAMAÇÃO PARA WEB,0615S03-sistemas para internet,80,sistemas para internet
+1617841,MARKETING DIGITAL E MÍDIAS SOCIAIS,0615S03-sistemas para internet,80,sistemas para internet
+1617841,IMERSÃO PROFISSIONAL: PROJETO DE APLICAÇÃO HÍBRIDA,0615S03-sistemas para internet,40,sistemas para internet
+1617841,"ESTUDO CONTEMPORÂNEO E TRANSVERSAL: PROPRIEDADE INTELECTUAL, LEITURA DE IMAGENS, GRÁFICOS E MAPAS",0615S03-sistemas para internet,10,sistemas para internet
+1617841,__TOTAL__,0615S03-sistemas para internet,2067,sistemas para internet
+1517110,Formação Inicial em Educação a Distância,0615S02-Sistemas de informação,40,Sistemas de informação
+1517110,Estudos das Relações Étnico-Raciais e para o Ensino de História e Cultura Afro-Brasileira e Africana,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Libras,0615S02-Sistemas de informação,40,Sistemas de informação
+1517110,Lógica de Programação e Algoritmos,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Interface Humano - Computador,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Bancos de dados,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Análise de Sistemas,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Engenharia de Software,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Matemática Computacional,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Programação Orientada a Objetos,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Sistema Gerenciador de Banco de Dados,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Atividades Extensionistas I - Tecnologia aplicada à Inclusão Digital - Levantamento,0615S02-Sistemas de informação,110,Sistemas de informação
+1517110,Inteligência Artificial Aplicada,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Estética e Design Aplicado a Publicidade,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Metodologia de Design e Concepção,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Segurança em Sistemas de Informação,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Aplicação Web e Móveis,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Computação em Nuvem,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Programação I,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Gestão de Startups,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Banco de Dados NoSQL,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Design para Aplicativos Móveis,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Programação II,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Segurança em Dispositivos Móveis,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Atividades Extensionistas II - Tecnologia aplicada à Inclusão Digital - Projeto,0615S02-Sistemas de informação,110,Sistemas de informação
+1517110,Internet das Coisas,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Gestão de Projetos,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Programação III,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,"Legislação, Ética e Conformidade",0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Arquitetura e Desenvolvimento de APIs para Back-end,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Testes de Aplicativos Móveis,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Programação IV,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,Direito Cibernético,0615S02-Sistemas de informação,65,Sistemas de informação
+1517110,__TOTAL__,0615S02-Sistemas de informação,2145,Sistemas de informação
+1599632,Desvendando essa caixa preta,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos iniciar a jornada!,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Estruturando os dados,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Conhecendo um novo paradigma,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Colocando tudo em ordem,0613E01-Engenharia de software,88,Engenharia de software
+1599632,"Meu primeiro site ""cringe""",0613E01-Engenharia de software,88,Engenharia de software
+1599632,Descobrindo o Javascript,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Meu primeiro Framework,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Conhecendo outro Framework,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos colocar o Framework para acessar um banco,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Iniciando o caminho pelo Java,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos manter as informações,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Back-End sem banco não tem,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos integrar sistemas,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Por que não paralelizar,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos de Python para BackEnd,0613E01-Engenharia de software,88,Engenharia de software
+1599632,O bom e velho PHP,0613E01-Engenharia de software,88,Engenharia de software
+1599632,E o C# também funciona,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Organizando as ideias,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos criar um App,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Posso criar um App de outra forma,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Lidando com sensores em dispositivos móveis,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Tirando proveito da nuvem para projetos de software,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos interligar as coisas com a nuvem,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos conhecer outra nuvem,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Agora vamos de outra abordagem de computação em nuvem,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Projeto de Mobile integrado com a nuvem,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Vamos gerenciar um projeto,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Empregando métodos ágeis,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Tratando a imensidão dos dados,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Dando inteligência ao software,0613E01-Engenharia de software,88,Engenharia de software
+1599632,Software sem segurança não serve,0613E01-Engenharia de software,88,Engenharia de software
+1599632,TÓPICOS EM LIBRAS: SURDEZ E INCLUSÃO,0613E01-Engenharia de software,88,Engenharia de software
+1599632,__TOTAL__,0613E01-Engenharia de software,2260,Engenharia de software
+1594810,ARQUITETURA DE COMPUTADORES,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,FUNDAMENTOS DE REDES DE COMPUTADORES,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,INTRODUÇÃO À PROGRAMAÇÃO ESTRUTURADA EM C,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,INTRODUÇÃO À SEGURANÇA DA INFORMAÇÃO,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,SISTEMAS DE INFORMAÇÃO E SOCIEDADE,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,BANCO DE DADOS,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,COMPUTAÇÃO EM NUVEM,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,"DESENVOLVIMENTO WEB EM HTML5, CSS, JAVASCRIPT E PHP",0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO EM PYTHON,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,ENGENHARIA E MODELAGEM DE SOFTWARE,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,DESENVOLVIMENTO RÁPIDO DE APLICAÇÕES EM PYTHON,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,GESTÃO E CONFIGURAÇÃO DE SERVIÇOS DE REDES WINDOWS,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,MÉTODOS ÁGEIS COM SCRUM,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,PROGRAMAÇÃO ORIENTADA A OBJETOS EM JAVA,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,QUALIDADE E TESTE DE SOFTWARE,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,"APLICATIVO DE CLOUD, IOT E INDÚSTRIA 4.0 EM PYTHON",0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,GESTÃO DE SERVIÇOS DE TI,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,GESTÃO E CONFIGURAÇÃO DE SERVIÇOS DE REDES LINUX,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,SEGURANÇA CIBERNÉTICA,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,DESENVOLVIMENTO E OPERAÇÕES INTEGRADOS (DEVOPS),0615S02-Sistemas de informação,100,Sistemas de informação
+1594810,PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS EM ANDROID,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,TÓPICOS EM LIBRAS: SURDEZ E INCLUSÃO,0615S02-Sistemas de informação,80,Sistemas de informação
+1594810,__TOTAL__,0615S02-Sistemas de informação,1620,Sistemas de informação
+1667219,Introdução ao EAD,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Lógica de programação e algoritmo,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Estrutura de dados,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Fundamentos De Redes De Computadores,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Arquitetura de computadores,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Políticas Sociais e Ambientais,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Gestão de segurança da informação,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Segurança de dados,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Introdução ao banco de dados,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Metodologia científica,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Computação gráfica,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Manutenção e otimização de banco de dados,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Linguagem de programação,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Respostas a incidentes de segurança,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Criptografia,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Análise de vulnerabilidades,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Ética em cibersegurança,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Modelagem de Sistemas,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Sistemas operacionais seguros,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Segurança defensiva,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Segurança ofensiva,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Perícia forense em segurança da informação,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Direito eletrônico,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Segurança em sistemas móveis,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Eletiva I,0612D01-defesa cibernética,60,defesa cibernética
+1667219,segurança em nuvem,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Gerenciamento de riscos e compliance,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Hacking ético e testes de penetração,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Ética e Responsabilidade Social,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Eletiva II,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Inovação em Negócios e Oportunidades,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Trabalho Conclusão de Curso,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Atividades de Curricularização de Extensão I,0612D01-defesa cibernética,36,defesa cibernética
+1667219,Atividades de Curricularização de Extensão II,0612D01-defesa cibernética,36,defesa cibernética
+1667219,Atividades de Curricularização de Extensão III,0612D01-defesa cibernética,42,defesa cibernética
+1667219,Atividades de Curricularização de Extensão IV,0612D01-defesa cibernética,36,defesa cibernética
+1667219,Atividades de Curricularização de Extensão V,0612D01-defesa cibernética,42,defesa cibernética
+1667219,Novas tecnologias aplicadas à comunicação,0612D01-defesa cibernética,60,defesa cibernética
+1667219,"Empreendedorismo, criatividade e inovação",0612D01-defesa cibernética,60,defesa cibernética
+1667219,Práticas de Gestão Corporativa,0612D01-defesa cibernética,60,defesa cibernética
+1667219,Libras – Língua Brasileira de Sinais,0612D01-defesa cibernética,60,defesa cibernética
+1667219,__TOTAL__,0612D01-defesa cibernética,2020,defesa cibernética
+1618022,Introdução ao EAD,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Lógica de programação e algoritmo,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Estrutura de dados,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Fundamentos De Redes De Computadores,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Arquitetura de computadores,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Políticas Sociais e Ambientais,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Atividades de Curricularização de Extensão I,0615S01-Segurança da informação,36,Segurança da informação
+1618022,Gestão de segurança da informação,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Segurança de dados,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Introdução ao banco de dados,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Metodologia científica,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Computação gráfica,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Manutenção e otimização de banco de dados,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Atividades de Curricularização de Extensão II,0615S01-Segurança da informação,36,Segurança da informação
+1618022,Linguagem de programação,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Respostas a incidentes de segurança,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Criptografia,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Análise de vulnerabilidades,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Ética em cibersegurança,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Modelagem de Sistemas,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Sistemas operacionais seguros,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Atividades de Curricularização de Extensão III,0615S01-Segurança da informação,42,Segurança da informação
+1618022,Segurança defensiva,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Segurança ofensiva,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Perícia forense em segurança da informação,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Direito eletrônico,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Segurança em sistemas móveis,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Eletiva I,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Atividades de Curricularização de Extensão IV,0615S01-Segurança da informação,36,Segurança da informação
+1618022,segurança em nuvem,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Gerenciamento de riscos e compliance,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Hacking ético e testes de penetração,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Ética e Responsabilidade Social,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Eletiva II,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Inovação em Negócios e Oportunidades,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Trabalho Conclusão de Curso,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Atividades de Curricularização de Extensão V,0615S01-Segurança da informação,42,Segurança da informação
+1618022,Novas tecnologias aplicadas à comunicação,0615S01-Segurança da informação,60,Segurança da informação
+1618022,"Empreendedorismo, criatividade e inovação",0615S01-Segurança da informação,60,Segurança da informação
+1618022,Práticas de Gestão Corporativa,0615S01-Segurança da informação,60,Segurança da informação
+1618022,Libras – Língua Brasileira de Sinais,0615S01-Segurança da informação,60,Segurança da informação
+1618022,__TOTAL__,0615S01-Segurança da informação,2020,Segurança da informação
+1619434,"Comunicação, cultura e sociedade",0616I01-Internet das coisas,60,Internet das coisas
+1619434,Estatística,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Estrutura de Dados,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Inteligência Artificial,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Introdução a EAD,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Modelo de Gestão,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Politicas Sociais e Ambientais,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Computação Gráfica,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Engenharia de Software,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Introdução a Banco de Dados,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Manutenção e Otimização de Banco de Dados,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Metodologia Cientifica,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Segurança de Dados,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Arquitetura de Aplicativos Móveis,0616I01-Internet das coisas,60,Internet das coisas
+1619434,CRIPTOGRAFIA,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Design de Interfaces para Dispositivos Móveis,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Eletiva I,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Gestão de Segurança da Informação,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Integração de Aplicativos Móveis com APIs de Terceiros,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Segurança e Privacidade de dados,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Desenvolvimento de Serviços Web para Dispositivos Móveis,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Eletiva II,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Inovação em Negócios e Oportunidades,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Novas Tecnologias Aplicadas a Comunicação,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Programação Orientada a Objeto,0616I01-Internet das coisas,60,Internet das coisas
+1619434,SEGURANÇA EM APLICATIVOS MÓVEIS,0616I01-Internet das coisas,60,Internet das coisas
+1619434,Trabalho de Conclusão de Curso,0616I01-Internet das coisas,60,Internet das coisas
+1619434,__TOTAL__,0616I01-Internet das coisas,1620,Internet das coisas
+1620561,Introdução ao EAD,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Lógica de programação e algoritmo,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Estrutura de Dados,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Estatística,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Arquitetura de computadores,0615S03-sistemas para internet,60,sistemas para internet
+1620561,"Comunicação, cultura e sociedade",0615S03-sistemas para internet,60,sistemas para internet
+1620561,Políticas Sociais e Ambientais,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Fundamentos de BIG DATA,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Segurança de dados,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Introdução ao Banco de Dados,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Metodologia científica,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Engenharia de Software,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Manutenção e otimização de banco de dados,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Design de interfaces para dispositivos móveis,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Sistemas Operacionais Mobile,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Criptografia,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Desenvolvimento de jogos para dispositivos móveis,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Segurança e privacidade de dados,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Gestão de segurança da informação,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Eletiva I,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Desenvolvimento de aplicações Android,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Desenvolvimento de Aplicações IOT,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Desenvolvimento Mobile,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Programação orientada a objetos,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Segurança em aplicativos móveis,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Eletiva II,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Trabalho de Conclusão de curso,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Novas tecnologias aplicadas à comunicação,0615S03-sistemas para internet,60,sistemas para internet
+1620561,"Empreendedorismo, criatividade e inovação",0615S03-sistemas para internet,60,sistemas para internet
+1620561,Práticas de Gestão Corporativa,0615S03-sistemas para internet,60,sistemas para internet
+1620561,Libras – Língua Brasileira de Sinais,0615S03-sistemas para internet,60,sistemas para internet
+1620561,__TOTAL__,0615S03-sistemas para internet,1720,sistemas para internet
+1620488,Acolhida,0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Projeto de Curso e Carreira,0612D01-Defesa cibernética,16,Defesa cibernética
+1620488,"Projeto em Arquitetura de Computadores, Redes e Sistemas Operacionais I",0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Arquitetura de Computadores e Sistemas Operacionais,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Fundamentos de Redes de Computadores,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,"Projeto em Arquitetura de Computadores, Redes e Sistemas Operacionais II",0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Segurança da Informação,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Redes de Computadores,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Projeto em Gestão de Projetos e Programas de Segurança da Informação I,0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Início e Planejamento de Projetos,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Cybersecurity Capstone,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Projeto em Gestão de Projetos e Programas de Segurança da Informação II,0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,"Execução, Monitoramento, Controle e Encerramento de Projetos",0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Programa e Política de Segurança da Informação,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,"Projeto em Segurança de Redes, Certificação Digital, Firewall e IDS I",0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Fundamentos da Administração de Sistemas Operacionais Open Source,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Defesa Cibernética I,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,"Projeto em Segurança de Redes, Certificação Digital, Firewall e IDS II",0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Administração de Sistemas Open Source: Avançado,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Defesa Cibernética II,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Projeto em Gestão de Riscos de Segurança da Informação com LGPD I,0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Gestão de Riscos de Segurança da Informação I,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,"Privacidade, Proteção de Dados e Marcos Legais",0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Projeto em Gestão de Riscos de Segurança da Informação com LGPD II,0612D01-Defesa cibernética,45,Defesa cibernética
+1620488,Gestão de Riscos de Segurança da Informação II,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Gestão de Serviços de TI para Segurança,0612D01-Defesa cibernética,90,Defesa cibernética
+1620488,Introdução a Libras,0612D01-Defesa cibernética,27,Defesa cibernética
+1620488,__TOTAL__,0612D01-Defesa cibernética,2558,Defesa cibernética
+1667554,Algoritmos e Programação Estruturada,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Business Architecture,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Prática Extensionista,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+1667554,Arquitetura de Software,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Relações Étnico-raciais e Responsabilidade Social,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Engenharia de Software,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,"Redes Convergentes, Sistemas Distribuídos e Virtualização",0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Leitura e Produção de Textos,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Data Mining,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Software Design and Architecture,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Empreendedorismo,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Cálculo,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Cloud Computing,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Desenvolvimento e Monitoramento de DashBoards,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Design Thinking,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Sistemas Operacionais,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Computational Thinking,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Prática Extensionista,0612G01-gestão da tecnologia da informação,60,gestão da tecnologia da informação
+1667554,Core Devops,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Continuous Integration (CI) e Deployment (CD),0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Segurança e Auditoria de Sistemas,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Monitoramento e Gerenciamento Server,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,"Administração Kubernetes, Rancher",0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Prática Extensionistas,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Digital Management,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Soft e Hard Skills,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Metodologia Ágeis,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Qualidade e Automação de Testes,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Transformação Digital em Estratégias Organizacionais,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,Projeto de Software,0612G01-gestão da tecnologia da informação,80,gestão da tecnologia da informação
+1667554,Língua Brasileira de Sinais (optativa) e demais optativas,0612G01-gestão da tecnologia da informação,40,gestão da tecnologia da informação
+1667554,__TOTAL__,0612G01-gestão da tecnologia da informação,2040,gestão da tecnologia da informação
+1588016,ALGORITMOS PARA DEV,0615S02-sistemas de informação,40,sistemas de informação
+1588016,DESENVOLVIMENTO EM JAVASCRIPT,0615S02-sistemas de informação,80,sistemas de informação
+1588016,LÓGICA COMPUTACIONAL,0615S02-sistemas de informação,80,sistemas de informação
+1588016,PROGRAMAÇÃO ESTRUTURADA PARA DEV,0615S02-sistemas de informação,40,sistemas de informação
+1588016,PROGRAMAÇÃO PARA INTERNET EM FRONT-END,0615S02-sistemas de informação,80,sistemas de informação
+1588016,SOCIEDADE BRASILEIRA E CIDADANIA,0615S02-sistemas de informação,80,sistemas de informação
+1588016,WEB DESIGN,0615S02-sistemas de informação,80,sistemas de informação
+1588016,ANÁLISE ORIENTADA A OBJETOS,0615S02-sistemas de informação,80,sistemas de informação
+1588016,BANCOS DE DADOS NÃO-CONVENCIONAIS,0615S02-sistemas de informação,80,sistemas de informação
+1588016,DESENVOLVIMENTO COM FRAMEWORK PHP,0615S02-sistemas de informação,80,sistemas de informação
+1588016,INTERFACE E USABILIDADE,0615S02-sistemas de informação,80,sistemas de informação
+1588016,MODELAGEM DE DADOS,0615S02-sistemas de informação,80,sistemas de informação
+1588016,PROGRAMAÇÃO E DESENVOLVIMENTO DE BANCO DE DADOS,0615S02-sistemas de informação,80,sistemas de informação
+1588016,PROGRAMAÇÃO PARA INTERNET EM BACK-END,0615S02-sistemas de informação,80,sistemas de informação
+1588016,ANÁLISE E DESENVOLVIMENTO DE SISTEMAS,0615S02-sistemas de informação,80,sistemas de informação
+1588016,DESENVOLVIMENTO COM FRAMEWORK ANGULAR,0615S02-sistemas de informação,80,sistemas de informação
+1588016,DESENVOLVIMENTO COM FRAMEWORK NODE.JS,0615S02-sistemas de informação,80,sistemas de informação
+1588016,DESENVOLVIMENTO COM FRAMEWORK REACT,0615S02-sistemas de informação,80,sistemas de informação
+1588016,DIREITO CIBERNÉTICO,0615S02-sistemas de informação,80,sistemas de informação
+1588016,OPTATIVA I,0615S02-sistemas de informação,80,sistemas de informação
+1588016,ENGENHARIA DE SOFTWARE,0615S02-sistemas de informação,80,sistemas de informação
+1588016,GERENCIAMENTO E QUALIDADE DE SOFTWARE,0615S02-sistemas de informação,80,sistemas de informação
+1588016,OPTATIVA II,0615S02-sistemas de informação,80,sistemas de informação
+1588016,PROCESSOS ÁGEIS PARA DESENVOLVIMENTO DE SOFTWARE,0615S02-sistemas de informação,80,sistemas de informação
+1588016,PROJETO DE SISTEMAS PARA INTERNET,0615S02-sistemas de informação,80,sistemas de informação
+1588016,REDES E SISTEMAS DISTRIBUÍDOS,0615S02-sistemas de informação,80,sistemas de informação
+1588016,ATIVIDADES COMPLEMENTARES,0615S02-sistemas de informação,100,sistemas de informação
+1588016,__TOTAL__,0615S02-sistemas de informação,2100,sistemas de informação
+1549921,Experiência Criativa. Navegando em Segurança e Privacidade da Informação,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Aspectos Legais de Segurança e Privacidade,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Raciocínio Algorítmico,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Fundamentos de Sistemas Ciberfísicos,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Filosofia,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Criptografia Aplicada,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Normas e Padrões de Segurança,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Programação Web,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Conectividade em Sistemas Ciberfísicos,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Arquitetura de Bancos de Dados,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Programação Imperativa,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Experiência Criativa: Implementando Sistemas com Criptografia,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Segurança de Serviços e Servidores,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Programação Orientada e Objetos,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Performance em Sistemas Ciberfísicos,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Clínica de TIC,0615S01-Segurança da informação,40,Segurança da informação
+1549921,Ética,0615S01-Segurança da informação,40,Segurança da informação
+1549921,Sistemas de Detecção e Prevenção de Intrusão,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Segurança de Sistemas,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Resolução de Problemas Estruturados em Computação,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Redes Convergentes,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Sistemas Operacionais Ciberfísicos,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Ethical Hacking,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Teologia e Sociedade,0615S01-Segurança da informação,40,Segurança da informação
+1549921,Experiência Criativa: Protegendo o Ambiente Computacional de Intrusões,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Gestão de Segurança e Auditoria de Sistemas,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Forense Computacional,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Software Seguro,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Cloud Computing,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Cibersegurança para Sistemas Ciberfísicos,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Análise de Malware e Engenharia Reversa,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Privacidade da Informação,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Aprendizagem de Máquina,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Big Data Analytics,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Gestão de Projetos e Métodos Ágeis,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Experiência Criativa: Usando o mindset do adversário na Cibersegurança,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Segurança e Privacidade para Ambiente Web,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Resposta a Incidentes de Cibersegurança,0615S01-Segurança da informação,80,Segurança da informação
+1549921,DevSecOps,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Segurança e Privacidade no Ciberespaço,0615S01-Segurança da informação,40,Segurança da informação
+1549921,Experiência Criativa: Criando Soluções com Cibersegurança by Design no Ciberespaço,0615S01-Segurança da informação,120,Segurança da informação
+1549921,Usabilidade e Fatores Humanos em Cibersegurança,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Governança de Cibersegurança,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Blockchain,0615S01-Segurança da informação,80,Segurança da informação
+1549921,Empreendedorismo e Inovação em TI,0615S01-Segurança da informação,40,Segurança da informação
+1549921,Data Hiding,0615S01-Segurança da informação,80,Segurança da informação
+1549921,__TOTAL__,0615S01-Segurança da informação,3200,Segurança da informação

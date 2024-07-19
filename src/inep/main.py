@@ -9,6 +9,7 @@ Changelog
 
 .. versionadded::    24.07
     |br| using pdftotxt (16)
+    |br| improve names (18)
 
 |   **Open Source Notification:** This file is part of open source program **INEP**
 |   **Copyright © 2024  Carlo Oliveira** <carlo@nce.ufrj.br>,
@@ -189,7 +190,7 @@ class Main:
         self.tag, self.areas = Counter(), Counter()
         self.from_file(dbase) if not dbase.all() else self.from_dbase(dbase)
 
-    def _add_info(self, arc="../data/ines.csv"):
+    def _add_info_from(self, arc="../data/ines.csv"):
         from csv import reader
         from collections import namedtuple
         field_names = "ifes instituto coid nome grau tagger tag_name"
@@ -291,7 +292,7 @@ class Main:
         return file_name, doc
 
 
-def test(text):
+def tokenize_into_words(text):
     def tokenize(poems):
         from string import punctuation
         import stop_words
@@ -314,7 +315,7 @@ def test(text):
     return tokenize(text)
 
 
-def test3():
+def tokenize_all_files_in_dir():
 
     dirname = Main.DIRNAME
     if dirname.is_dir():
@@ -330,13 +331,13 @@ def test3():
     with open(file_text, 'r', encoding='utf-8') as fd:
         t = fd.read()
         print(t)
-        t = test(t)
+        t = tokenize_into_words(t)
         st = 15
         [print(t[a:a + st]) for a in range(0, len(t), st)]
     return
 
 
-def test4():
+def convert_pdf_to_txt_in_dir():
     def args(file_name):
         file_text = str(file_name).replace(".pdf", ".txt").replace(
             "PPCs cursos area 06", "ppc_txt")
@@ -358,7 +359,7 @@ def test2():
     main_instance = Main(db)
     # [print(d.name) for d in main_instance.doc]
     t = main_instance.doc[11].content
-    t = test(t)
+    t = tokenize_into_words(t)
     st = 15
     [print(t[a:a + st]) for a in range(0, len(t), st)]
 
@@ -369,7 +370,7 @@ def main():
     # print(dados, len(db.all()), db)
     main_instance = Main(db).tag_base()
     # tags = Counter()
-    # [tags.update(doc.tags) for doc in main.doc]
+    # [tags.update(doc.tags) for doc in main_instance.doc]
     main_instance.trim_class(30)
     # print(main_instance.tag)
     # som = SelfOrgMap([(cd.content, cd.tag_name, cd.nome) for cd in main_instance.doc if cd.tag_name])

@@ -6,6 +6,7 @@ Changelog
 .. versionadded::    24.07
     |br| first version of main (11)
     |br| added trim and rebuff (15)
+    |br| review relevancy, equalize entries (18)
 
 |   **Open Source Notification:** This file is part of open source program **INEP**
 |   **Copyright © 2024  Carlo Oliveira** <carlo@nce.ufrj.br>,
@@ -17,21 +18,17 @@ Changelog
 """
 from cmath import log
 from itertools import chain as ch
-
 from configuration import TXT, TAG
 from collections import Counter
 STOPWORDS = "https://gitlab.com/cetoli/spike/-/raw/master/src/neurocomp/conf/stopwords.txt"
 """Remove as stopwords da especificação"""
 
 
-def scan(here, word, ori, rel, wind, size):
-    # start = here - wind if here >= wind else 0
-    # ender = here + wind if here + wind <= size else size
-    start, ender = max(0, here - wind), min(size, here + wind)
+def scan(here, word, original_text, word_relevancy_list, scanning_window, size):
+    start, ender = max(0, here - scanning_window), min(size, here + scanning_window)
     return [min((other, word), (word, other))
-            for other in ori[start:ender]
-            # if other == word or other not in rel or word not in rel
-            if other != word and other in rel and word in rel
+            for other in original_text[start:ender]
+            if other != word and other in word_relevancy_list and word in word_relevancy_list
             ]
 
 
@@ -98,24 +95,9 @@ class SurveyText:
         self.relevant = [strip(word) for word, cnt in self.text.items() if cnt >= relevancy]
         self.pairs, self.levels = {}, {}
         self.good = self.relevant
+        self.relevancy = relevancy
         self.original = original
-    '''
-    def survey(self, window=10, forte=8):
-        size = len(self.relevant)
-        for here, word in enumerate(self.relevant):
-            start = here - window if here >= window else 0
-            ender = here + window if here + window <= size else size
-            for other in self.relevant[start:ender]:
-                if other == word:
-                    continue
-                entry = (other, word) if other < word else (word, other)
-                self.pairs[entry] = self.pairs.setdefault(entry, 0) + 1
-        self.levels = Counter([i for (i, j), _ in self.pairs.items()])
-        levels = Counter([j for (i, j), _ in self.pairs.items()])
-        levels.update({key: value for key, value in self.levels.items() if key not in levels})
-        levels = {key: (levels[key] + self.levels.setdefault(key, 0)) for key in levels}
-        self.levels = {key: value // 6 - 1 for key, value in levels.items() if value > forte}
-    '''
+
     def survey(self, window=10, forte=8):
         original = self.original
         size = len(original)
@@ -127,7 +109,7 @@ class SurveyText:
         # pairs = [scanner(here, word, original, rlv, window, size) for here, word in enumerate(original)]
         pairs = pool.starmap(scan, [(here, word, original, rlv, window, size) for here, word in enumerate(original)])
         self.pairs = Counter(ch.from_iterable(pairs))
-        print([(a, b, c) for (a, b), c in self.pairs.items() if c > 20])
+        # print([(a, b, c) for (a, b), c in self.pairs.items() if c > 20])
         pool.close()
         self.levels = Counter([i for (i, j), _ in self.pairs.items()])
         levels = Counter([j for (i, j), _ in self.pairs.items()])
@@ -135,30 +117,17 @@ class SurveyText:
         levels = {key: (levels[key] + self.levels.setdefault(key, 0)) for key in levels}
         self.levels = {key: value // 6 - 1 for key, value in levels.items() if value > forte}
 
-    def nodes_(self, relevancy=2):
-        pass
-        # node = {name[0]: good for name, good in self.pairs.items() if good>relevancy}
-        # relevant = {na: good for (na, _), good in self.pairs.items() if good > relevancy}
-        # relevant.update({na: good for (_, na), good in self.pairs.items() if good > relevancy})
-        # node = {name: good for name, good in self.levels.items() if name in relevant}
-        # node = ({nd: cnt for nd, cnt in self.levels.items() if nd in node})
-        # # node.update({name[1]: good if good > node.setdefault(name[1], 0) else node[name[1]]
-        # #              for name, good in self.pairs.items() if good>relevancy})
-        # return node.keys()
-        # return node.items()
-        # return self.levels.items()
-        # return node.items()
-
     def nodes(self, relevancy=2):
         relevant = {na: good for (na, nb), good in self.pairs.items()
                     if (good > relevancy) and (na in self.good) and (nb in self.good)
                     }
         relevant.update({na: good for (_, na), good in self.pairs.items() if good > relevancy and na in self.good})
         node = {name: good for name, good in self.levels.items() if name in relevant}
-        node = ({nd: cnt for nd, cnt in self.levels.items() if nd in node})
+        # node = ({nd: cnt for nd, cnt in self.levels.items() if nd in node})
         return node.items()
 
-    def show(self, relevancy=20):
+    def show(self, relevancy=None):
+        relevancy = relevancy or self.relevancy
         tuple_list = list(self.pairs.items())
         # tuple_list = tuple_list.sort(key = lambda x: x[1], reverse=True)
         tuple_list = sorted(tuple_list, key=lambda x: x[1], reverse=True)
@@ -166,7 +135,8 @@ class SurveyText:
                  if (good > relevancy) and (na in self.good) and (nb in self.good)]
         return _list
 
-    def trim(self, relevancy=20):
+    def trim(self, relevancy=None):
+        relevancy = relevancy or self.relevancy
         relevant = self.show(relevancy=relevancy)
         relevant = [a for a, *_ in relevant]+[a for _, a, *_ in relevant]
         print(len(relevant))
@@ -195,13 +165,10 @@ class SurveyText:
 
     # noinspection SpellCheckingInspection
     def paint(self, relevancy=20, cof=90, top=80, size=30):
-        print(self.show(relevancy))  # [:200])
-        # print(st.nodes())
-
+        # print(self.show(relevancy))  # [:200])
         import networkx as nx  # importing networkx package
         import matplotlib.pyplot as plt  # importing matplotlib package and pyplot is for displaying the graph on canvas
         import matplotlib
-        # matrix = "yyyycccccccmmmmmmmmbbbbbbbbbggggggggggggrrrrrrrrrrrrrrrrrrr"
         ma = [x for x in matplotlib.colors.ColorConverter.colors.keys() if len(x) == 1]
         print(ma)
         matrix = "ycmgbr"*2000
@@ -236,19 +203,21 @@ class SurveyText:
             "anhanguera", "ampli", "capaz", "nesse", "paraná", "faveni", "abeu",
             "cinco", "ch", "hr", "editora", "ppt", "outro", "pucpr", 'nota', 'maneira'
         ]
-        edger = 15
+        edger = relevancy
 
         [self.good.remove(ng) for ng in skp if ng in self.good]
-        good = ch([[a, b] for a, b, _ in self.show(edger)])
-        # ?top = 200
+        good = list(ch.from_iterable([[a, b] for a, b, _ in self.show(edger)]))
         siz = {node: size for node, size in self.nodes(relevancy) if node not in skp and node in good}
+        print("--------------------", len(siz), len(good), )
         _ = [wg.add_node(node, size=size) for node, size in siz.items()]
         _ = [wg.add_edge(a, b, color=colors[max(lm, w-cof)], weight=(log((min(top, w-cof)+0.01)*20).real or 1)/100000)
              for a, b, w in self.show(edger)]
-        # sizes = [1.0 for _, size in self.nodes(relevancy)]  #
         sizes = [int(log(siz[s]+0.0001 if s in siz else 5).real * size) for s, n in wg.nodes.items()]
-        t = list(set(wg.nodes.keys()).difference(set(siz.keys())))
-        [print(t[a:a + 10]) for a in range(0, len(t), 20)]
+        # t = list(set(wg.nodes.keys()).difference(set(siz.keys())))
+        # [print(t[a:a + 10]) for a in range(0, len(t), 10)]
+        # print("--------------------", len(siz))
+        # t = list(set(siz.keys()))
+        # [print(t[a:a + 10]) for a in range(0, len(t), 10)]
 
         color = [colors[a] for a, _ in enumerate(wg.nodes)]
         # color = [colors[wg.nodes[s]['size']] for s in wg.nodes]
@@ -268,9 +237,8 @@ def test2(text=None):
     # print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     # [print(nd) for nd in sv.show(40)]
     # sv.plot()
-    t = sv.trim()
     print(len(Text.TEXT.original))
-    [print(t[a:a+10]) for a in range(0, len(t), 20)]
+    # [print(t[a:a+10]) for a in range(0, len(t), 20)]
     t = sorted(sv.rebuff(20))
     print(len(t))
     [print(t[a:a+10]) for a in range(0, len(t), 20)]
@@ -279,7 +247,7 @@ def test2(text=None):
 
 def test(text=None):
     from pathlib import Path
-    from main import test
+    from main import tokenize_into_words as strip
     dados = Path(__file__).parent.parent / "data" / "inep.json"
     from tinydb import TinyDB, Query
     db = TinyDB(dados)
@@ -288,15 +256,13 @@ def test(text=None):
           '1517110', '1620488', '1588016', '1666036', '1599632', '1615338', '1671887', '1618022',
           '153693', '1550008', '1617840', '1617717', '1565359', '1619434', '1667554']
 
-    x = db.search(query.coid == cs[22])  # 3 7 -8 9 -11 -14 16 ++18 ++21
-    t = text or x[0]["content"]
-    t = test(t)
-    main(t)
-    # st = 15
-    # [print(t[a:a + st]) for a in range(0, len(t), st)]
-
-    # print(x[0]["content"])  # ["content"][:100])
-    # test2(x[0]["content"])
+    x = db.search(query.coid == cs[14])[0]  # 3 7 -8 9 -11 -14=30k 16 ++18 ++21=10k
+    t = text or x["content"]
+    print(f"course id: {x['coid']} course name: {x['course']} instituto: {x['ifes']}")
+    t = strip(t)
+    releva = 6 * max(1, len(t)//12000)
+    print("releva = ", releva)
+    main(t, releva)
 
 
 def test_survey(text=None):
@@ -313,18 +279,16 @@ def test_survey(text=None):
     # main(t)
 
 
-def main(text=None):
-    # tx = Text(text).cleaner()
+def main(text=None, releva=2):
     tc = Counter(text)
-    releva = 30
+
     sv = SurveyText(tc, text, relevancy=releva)
     sv.survey()
-    print(len(text))
     # [print(t[a:a+10]) for a in range(0, len(t), 20)]
     # t.sort()
     t = sorted(sv.rebuff(20))
-    print(len(t))
-    [print(t[a:a+10]) for a in range(0, len(t), 20)]
+    print("X->> texto original:", len(text), " XX----->  tokens revisados:", len(t))
+    # [print(t[a:a+10]) for a in range(0, len(t), 20)]
     sv.paint(relevancy=releva, cof=50, top=15, size=240)
     return t
 
