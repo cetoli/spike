@@ -1,3 +1,19 @@
+# noinspection SpellCheckingInspection
+""" Utilities for project Inep.
+
+Changelog
+---------
+.. versionadded::    24.07
+    |br| first version of main (19)
+
+|   **Open Source Notification:** This file is part of open source program **INEP**
+|   **Copyright © 2024  Carlo Oliveira** <carlo@nce.ufrj.br>,
+|   **SPDX-License-Identifier:** `GNU General Public License v3.0 or later <https://is.gd/3Udt>`_.
+|   `Labase <http://labase.selfip.org/>`_ - `NCE <https://portal.nce.ufrj.br>`_ - `UFRJ <https://ufrj.br/>`_.
+
+.. codeauthor:: Carlo Oliveira <carlo@nce.ufrj.br>
+
+"""
 import numpy as np
 GLOVE = "/home/carlo/Documentos/inpe/cbow_s50.txt"
 
@@ -33,6 +49,10 @@ def tokenize_into_words(text):
 
         return tokenize_poem(poems)
     return tokenize(text)
+
+
+def mean(vec0, vec1):
+    return np.linalg.norm(vec0 - vec1)
 
 
 def euclid(vec0, vec1):
